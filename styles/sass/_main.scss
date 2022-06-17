@@ -1,0 +1,83 @@
+// home page "about" section styling
+.about {
+    background-color: $ice;
+    height: 50vh;
+    .wrapper {
+        padding: 0 80px;
+        text-align: center;
+    }
+}
+
+p {
+    text-align: left;
+    line-height: 32px;
+}
+
+h2 {
+    font-size: 2.1rem;
+    padding-top: 80px;
+}
+
+// home page articles styling
+
+.skills,
+.gear {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.imgContainer {
+    background-color: $canary;
+    width: 40%;
+    height: 100%;
+}
+
+.textContainer {
+    width: 40%;
+    margin: 20px 0;
+}
+
+.skills {
+    .imgContainer {
+        margin-left: 40px;
+    }
+    .textContainer {
+        margin-right: 80px;
+        padding-left: 80px;
+    }
+    img {
+        position: relative;
+        top: -35px;
+        left: -40px;
+    }
+}
+
+.gear {
+    .imgContainer {
+        margin-right: 40px;
+        order: 1
+    }
+    .textContainer {
+        margin-left: 80px;
+        padding-right: 40px;
+        text-align: right;
+    }
+    img {
+        position: relative;
+        top: -35px;
+        right: -40px;
+    }
+}
+
+// home page "links" section styling
+
+.links {
+    background-color: $ice;
+    height: 50vh;
+    .wrapper {
+        display: flex;
+    }
+}
+
+

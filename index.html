@@ -13,76 +13,84 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Captured</h1>
-        <div class="boxImage">
-            <!-- div for header boxImage background-->
-        </div>
-    </header>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>Captured</h1>
+            <div class="boxImage">
+                <!-- div for header boxImage background-->
+            </div>
+        </header>
+    </div> <!-- end of wrapper -->
     <main>
         <section class="about">
-            <h2>What is Captured?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ducimus delectus, quasi ipsa adipisci similique placeat doloremque sapiente ad quo? Magnam non illo beatae placeat aperiam dolorem doloremque iusto tempore!</p>
-            <a href="#" class="buttonLinks">Find out more</a>
+            <div class="wrapper">
+                <h2>What is Captured?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic repellat eveniet, dolores minus consequatur tenetur consectetur veniam nemo aperiam! Similique tempora nulla ad nostrum consequatur vero voluptas, animi amet autem illum molestias voluptatem quas minus excepturi recusandae atque deserunt ex quod! Nihil eligendi adipisci mollitia et deleniti rem quasi?</p>
+                <a href="#" class="buttonLinks">Find out more</a>
+            </div>
         </section> <!-- end of About section -->
-        <section class="articles">
-            <article class="skills">
-                <div class="imgContainer">
-                    <img src="./captured-final-assets/left-image.jpg" alt="Side view of a camera with a long lens and a sun setting over hills in the background">
-                </div> <!-- end of imgContainer-->
-                <div class="textContainer">
-                    <h3>Unlock Your Skills</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fuga necessitatibus deserunt vero ad libero, labore quasi eaque sit repudiandae dolorum est quam. Dignissimos deleniti animi sit ratione eveniet ad.</p>
-                    <a href="#" class="buttonLinks">Read more</a>
-                </div> <!-- end of textContainer-->
-            </article>
-            <article class="gear">
-                <div class="imgContainer">
-                    <img src="./captured-final-assets/right-image.jpg" alt="Closeup of a camera held by a person">
-                </div> <!-- end of imgContainer-->
-                <div class="textContainer">
-                    <h3>Getting New Gear</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis omnis accusantium esse suscipit dolorum. Nihil, veniam esse. Enim, esse beatae vitae nobis excepturi omnis doloremque nisi deleniti. Perspiciatis, itaque?</p>
-                    <a href="#" class="buttonLinks">Read more</a>
-                </div> <!-- end of textContainer-->
-            </article>
-        </section> <!-- end of Articles section -->
+        <div class="wrapper articles">
+            <section class="articles">
+                <article class="skills">
+                    <div class="imgContainer">
+                        <img src="./captured-final-assets/left-image.jpg" alt="Side view of a camera with a long lens and a sun setting over hills in the background">
+                    </div> <!-- end of imgContainer-->
+                    <div class="textContainer">
+                        <h3>Unlock Your Skills</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fuga necessitatibus deserunt vero ad libero, labore quasi eaque sit repudiandae dolorum est quam. Dignissimos deleniti animi sit ratione eveniet ad.</p>
+                        <a href="#" class="buttonLinks">Read more</a>
+                    </div> <!-- end of textContainer-->
+                </article>
+                <article class="gear">
+                    <div class="imgContainer">
+                        <img src="./captured-final-assets/right-image.jpg" alt="Closeup of a camera held by a person">
+                    </div> <!-- end of imgContainer-->
+                    <div class="textContainer">
+                        <h3>Getting New Gear</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis omnis accusantium esse suscipit dolorum. Nihil, veniam esse. Enim, esse beatae vitae nobis excepturi omnis doloremque nisi deleniti. Perspiciatis, itaque?</p>
+                        <a href="#" class="buttonLinks">Read more</a>
+                    </div> <!-- end of textContainer-->
+                </article>
+            </section> <!-- end of Articles section -->
+        </div> <!-- end of wrapper -->
         <section class="links">
-            <div class="topPicks">
-                <i class="fa-solid fa-camera"></i>
-                <h3><a href="#">Top Picks</a></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
-            </div>
-            <div class="community">
-                <i class="fa-solid fa-users"></i>
-                <h3><a href="#">Community</a></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi
-                provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
-            </div>
-            <div class="blog">
-                <i class="fa-solid fa-file"></i>
-                <h3><a href="./blog.html">Blog</a></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi
-                provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
-            </div>
-            <div class="contact">
-                <i class="fa-solid fa-phone-flip"></i>
-                <h3><a href="./contact.html">Contact</a></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi
-                provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
-            </div>
-            <div class="sr-only">
-                <!-- map background image -->
-            </div>
-        </section>
+            <div class="wrapper">
+                <div class="topPicks">
+                    <i class="fa-solid fa-camera"></i>
+                    <h3><a href="#">Top Picks</a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
+                </div>
+                <div class="community">
+                    <i class="fa-solid fa-users"></i>
+                    <h3><a href="#">Community</a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi
+                    provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
+                </div>
+                <div class="blog">
+                    <i class="fa-solid fa-file"></i>
+                    <h3><a href="./blog.html">Blog</a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi
+                    provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
+                </div>
+                <div class="contact">
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <h3><a href="./contact.html">Contact</a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi
+                    provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
+                </div>
+                <div class="sr-only">
+                    <!-- map background image -->
+                </div>
+            </div> <!-- end of wrapper -->
+        </section> <!-- emd of links section -->
         <article class="profile">
             <div class="imgContainer">
                 <img src="./captured-final-assets/small-box.jpg" alt="young man sitting at the top of a hill/mountain holding a camera">
@@ -112,13 +120,3 @@
     </footer>
 </body>
 </html>
-
-<!-- To Do
-1. compress images -> not working
-2. write html
-3. write css
-
-4. minify css
-5. final push to GitHub
-6. Push to Netlify
--->
