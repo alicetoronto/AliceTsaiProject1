@@ -14,7 +14,20 @@ html {
 
 a {
     text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    &:visited {
+        color: $black;
+    }
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+    }
+    &:focus {
+        outline: dotted 2px $seaGreen;
+    }
 }
+
 
 ul {
     list-style: none;
@@ -24,6 +37,7 @@ ul {
 
 body {
     font-family: $bodyFont;
+    color: $black;
 }
 
 h1,
@@ -33,6 +47,15 @@ h3 {
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p {
+    text-align: left;
+    line-height: 32px;
 }
 
 button,
@@ -46,6 +69,10 @@ button,
     display: inline-block;
     text-align: center;
     padding: 10px 15px;
+        &:hover,
+        &:focus {
+            color: $black;
+        }
 }
 
 .wrapper {
@@ -58,4 +85,32 @@ img {
     display: block;
     width: 100%;
     object-fit: cover;
+    // min-width: 200px;
+}
+
+.imgContainer {
+    height: 100%;
+    min-width: 300px;
+}
+
+.about,
+.links,
+.profile {
+    background-color: $ice;
+}
+
+nav {
+    align-self: flex-end;
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 80px;
+        font-family: $headingFont;
+        text-transform: uppercase;
+        li {
+            padding: 5px;
+            margin: 15px;
+            margin-bottom: 0;
+        }
+    }
 }

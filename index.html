@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Captured</title>
+    <title>Captured - Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto&display=swap"
@@ -14,11 +14,11 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <header class="homeHeader">
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
@@ -30,93 +30,116 @@
         </header>
     </div> <!-- end of wrapper -->
     <main>
-        <section class="about">
+        <section class="about" id="about">
             <div class="wrapper">
                 <h2>What is Captured?</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic repellat eveniet, dolores minus consequatur tenetur consectetur veniam nemo aperiam! Similique tempora nulla ad nostrum consequatur vero voluptas, animi amet autem illum molestias voluptatem quas minus excepturi recusandae atque deserunt ex quod! Nihil eligendi adipisci mollitia et deleniti rem quasi?</p>
                 <a href="#" class="buttonLinks">Find out more</a>
             </div>
         </section> <!-- end of About section -->
-        <div class="wrapper articles">
             <section class="articles">
-                <article class="skills">
-                    <div class="imgContainer">
-                        <img src="./captured-final-assets/left-image.jpg" alt="Side view of a camera with a long lens and a sun setting over hills in the background">
-                    </div> <!-- end of imgContainer-->
-                    <div class="textContainer">
-                        <h3>Unlock Your Skills</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fuga necessitatibus deserunt vero ad libero, labore quasi eaque sit repudiandae dolorum est quam. Dignissimos deleniti animi sit ratione eveniet ad.</p>
-                        <a href="#" class="buttonLinks">Read more</a>
-                    </div> <!-- end of textContainer-->
-                </article>
-                <article class="gear">
-                    <div class="imgContainer">
-                        <img src="./captured-final-assets/right-image.jpg" alt="Closeup of a camera held by a person">
-                    </div> <!-- end of imgContainer-->
-                    <div class="textContainer">
-                        <h3>Getting New Gear</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis omnis accusantium esse suscipit dolorum. Nihil, veniam esse. Enim, esse beatae vitae nobis excepturi omnis doloremque nisi deleniti. Perspiciatis, itaque?</p>
-                        <a href="#" class="buttonLinks">Read more</a>
-                    </div> <!-- end of textContainer-->
-                </article>
+                <div class="wrapper articles">
+                    <article class="skills">
+                        <div class="imgContainer">
+                            <img src="./captured-final-assets/left-image.jpg" alt="Side view of a camera with a long lens and a sun setting over hills in the background">
+                        </div> <!-- end of imgContainer-->
+                        <div class="textContainer">
+                            <h3>Unlock Your Skills</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fuga necessitatibus deserunt vero ad libero, labore quasi eaque sit repudiandae dolorum est quam. Dignissimos deleniti animi sit ratione eveniet ad.</p>
+                            <a href="#" class="buttonLinks">Read more</a>
+                        </div> <!-- end of textContainer-->
+                    </article> <!-- end of Skills article -->
+                    <article class="gear">
+                        <div class="imgContainer">
+                            <img src="./captured-final-assets/right-image.jpg" alt="Closeup of a camera held by a person">
+                        </div> <!-- end of imgContainer-->
+                        <div class="textContainer">
+                            <h3>Getting New Gear</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis omnis accusantium esse suscipit dolorum. Nihil, veniam esse. Enim, esse beatae vitae nobis excepturi omnis doloremque nisi.</p>
+                            <a href="#" class="buttonLinks">Read more</a>
+                        </div> <!-- end of textContainer-->
+                    </article> <!-- end of Gear article -->
+                </div> <!-- end of wrapper -->
+                <div class="fullBleedContainer">
+                    <!-- full bleed in $ice -->
+                </div>
             </section> <!-- end of Articles section -->
-        </div> <!-- end of wrapper -->
         <section class="links">
-            <div class="wrapper">
-                <div class="topPicks">
-                    <i class="fa-solid fa-camera"></i>
-                    <h3><a href="#">Top Picks</a></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
+            <div class="wrapper links">
+                <div class="linkItems topPicks">
+                    <a href="#">
+                        <i class="fa-solid fa-camera"></i>
+                        <h3>Top Picks</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus ipsum esse, dolorum impedit nulla tempore sint. Suscipit, ab nisi!</p>
                 </div>
-                <div class="community">
-                    <i class="fa-solid fa-users"></i>
-                    <h3><a href="#">Community</a></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi
-                    provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
+                <div class="linkItems community">
+                    <a href="#">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Community</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus ipsum esse, dolorum impedit nulla tempore sint.
+                    Suscipit, ab nisi!</p>
                 </div>
-                <div class="blog">
-                    <i class="fa-solid fa-file"></i>
-                    <h3><a href="./blog.html">Blog</a></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi
-                    provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
+                <div class="linkItems blog">
+                    <a href="./blog.html">
+                        <i class="fa-solid fa-file"></i>
+                        <h3>Blog</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus ipsum esse, dolorum impedit nulla tempore sint.
+                    Suscipit, ab nisi!</p>
                 </div>
-                <div class="contact">
-                    <i class="fa-solid fa-phone-flip"></i>
-                    <h3><a href="./contact.html">Contact</a></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero enim facere. Similique at consectetur quasi
-                    provident impedit veritatis id ad facilis pariatur amet, perferendis quam eligendi modi nesciunt maxime!</p>
-                </div>
-                <div class="sr-only">
-                    <!-- map background image -->
+                <div class="linkItems contact">
+                    <a href="./contact.html">
+                        <i class="fa-solid fa-phone-flip"></i>
+                        <h3>Get in Touch</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus ipsum esse, dolorum impedit nulla tempore sint.
+                    Suscipit, ab nisi!</p>
                 </div>
             </div> <!-- end of wrapper -->
-        </section> <!-- emd of links section -->
-        <article class="profile">
-            <div class="imgContainer">
-                <img src="./captured-final-assets/small-box.jpg" alt="young man sitting at the top of a hill/mountain holding a camera">
+        </section> <!-- end of links section -->
+        <!-- <div class="wrapper"> -->
+            <div class="mapBackgroundImg">
+                <!-- map background image -->
             </div>
-            <div class="textContainer">
-                <h2>This Month Profile</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab deleniti quas eligendi magnam, velit minus? Iusto, dolores eligendi ratione fugiat, culpa pariatur dolorem esse accusantium doloribus odit, suscipit repudiandae nihil.</p>
-                <a href="#" class="buttonLinks">Find out more</a>
+        <!-- </div> -->
+        <article class="profile">
+            <div class="wrapper profile">
+                <div class="imgContainer">
+                    <img src="./captured-final-assets/small-box.jpg" alt="young man sitting at the top of a hill/mountain holding a camera">
+                </div>
+                <div class="textContainer">
+                    <h2>This Month Profile</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab deleniti quas eligendi magnam, velit minus? Iusto, dolores eligendi ratione fugiat, culpa pariatur dolorem esse accusantium doloribus odit, suscipit repudiandae nihil. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab deleniti quas eligendi magnam, velit minus?</p>
+                    <a href="#" class="buttonLinks">Find out more</a>
+                </div>
             </div>
         </article>
         <section class="gallery">
-            <ul>
-                <li>
-                    <img src="./captured-final-assets/gallery-image-1.jpg" alt="Closeup of the back of a camera (lens facing away) with a screen that is off">
-                </li>
-                <li>
-                    <img src="./captured-final-assets/gallery-image-2.jpg" alt="Closeup of the front of a camera on a bed of fir branches, with eucalyptus branches framing the camera">
-                </li>
-                <li>
-                    <img src="./captured-final-assets/gallery-image-3.jpg" alt="Closeup of a Nikon brand camera nestled between other cameras">
-                </li>
-            </ul>
+            <div class="wrapper gallery">
+                <ul>
+                    <li>
+                        <div class="imgContainer">
+                            <img src="./captured-final-assets/gallery-image-1.jpg" alt="Closeup of the back of a camera (lens facing away) with a screen that is off">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgContainer">
+                            <img src="./captured-final-assets/gallery-image-2.jpg" alt="Closeup of the front of a camera on a bed of fir branches, with eucalyptus branches framing the camera">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgContainer">
+                            <img src="./captured-final-assets/gallery-image-3.jpg" alt="Closeup of a Nikon brand camera nestled between other cameras">
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
-        <p>Copyright © 2018 HackerYou</p>
+        <p>Copyright © 2018 <a href="https://junocollege.com">HackerYou</a></p>
     </footer>
 </body>
 </html>

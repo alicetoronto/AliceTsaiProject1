@@ -1,34 +1,19 @@
-header {
+// Home header
+
+.homeHeader {
     background-image: url(../captured-final-assets/header-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 70vh;
+    height: 75vh;
     max-height: 755px;
     position: relative;
     display: flex;
     flex-direction: column;
-}
-
-nav {
-    align-self: flex-end;
-}
-
-ul {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 80px;
-    font-family: $headingFont;
-    text-transform: uppercase;
-
-    li {
-        padding: 5px;
-        margin: 15px;
-        margin-bottom: 0;
-    }
     li:first-child {
         border-bottom: 3px $seaGreen solid;
     }
 }
+
 
 h1 {
     font-size: 6.9rem;
@@ -43,13 +28,24 @@ h1 {
 .boxImage {
     background-image: url(../captured-final-assets/header-box-image.jpg);
     background-size: cover;
-    height: 500px;
-    width: 475px;
+    height: 510px;
+    width: 510px;
     border: 40px solid $canary;
     border-right: none;
     box-sizing: content-box;
     position: absolute;
     z-index: 10;
-    bottom: -100px;
+    bottom: -180px;
     right: 0;
+}
+
+// Blog header
+
+.blogHeader {
+    li:nth-child(3) {
+    border-bottom: 3px $seaGreen solid;
+    }
+    h1 {
+        margin: 0 auto;
+    }
 }
