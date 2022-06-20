@@ -11,7 +11,7 @@
     }
 }
 
-// home page articles styling
+// home page article section styling
 
 .articles {
     width: 100%;
@@ -25,7 +25,6 @@
 .gear {
     display: flex;
     justify-content: space-between;
-    // align-items: center;
     .imgContainer {
             background-color: $canary;
             width: 40%;
@@ -123,6 +122,12 @@ i {
     height: 500px;
 }
 
+// home page profile section styling
+
+h2 {
+    font-size: 2.1rem;
+}
+
 .wrapper.profile {
     display: flex;
     flex-wrap: wrap;
@@ -160,22 +165,59 @@ i {
     padding: 100px 80px 100px 80px;
 }
 
-footer {
-    a {
-        color: $white;
-        &:visited {
-            color: $seaGreen;
-        }
-        &:hover {
-            transform: none;
+// blog page main and aside styling
+.blogPage {
+    background-color: $ice;
+}
+
+.wrapper.blogPage {
+    display: flex;
+    background-color: transparent;
+    main {
+        width: 69%;
+        margin-right: 30px;
+        background-color: $ice;
+
+        .textContainer {
+            border-left: 5px solid $canary;
+            border-bottom: 5px solid $canary;
+            padding: 35px;
+            padding-bottom: 0;
         }
     }
-    p {
-        margin: 0;
-        padding: 5px 0;
-        text-align: center;
-        background-color: $black;
-        color: $ice;
+    aside {
+        // position: sticky;
+        // top: 0;
+        width: 31%;
+        order: -1;
+        margin: 100px 60px 0 60px;
+        height: 100%;
+        background-color: $white;
+        transform: translateY(200px);
+        .imgContainer {
+            position: relative;
+            left: -60px;
+            top: -30px;
+            height: auto;
+            width: 110%;
+        }
+        .textContainer {
+            margin: 0 20px 30px 20px;
+        }
+        ul {
+            margin-top: 20px;
+        }
+        li {
+            color: $seaGreen;
+            line-height: 1.6rem;
+            list-style: inside;
+        }
+    }
+}
 
+.mainImg {
+    background-color: $canary;
+    img {
+        transform: translate(30px, -30px);
     }
 }

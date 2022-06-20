@@ -366,8 +366,7 @@ nav ul li {
 .homeHeader li:first-child {
   border-bottom: 3px #4CEEA7 solid;
 }
-
-h1 {
+.homeHeader h1 {
   font-size: 6.9rem;
   -ms-flex-item-align: center;
       align-self: center;
@@ -392,11 +391,29 @@ h1 {
   right: 0;
 }
 
+.blogHeader {
+  height: 345px;
+}
 .blogHeader li:nth-child(3) {
   border-bottom: 3px #4CEEA7 solid;
 }
 .blogHeader h1 {
+  font-size: 4rem;
+  text-align: center;
   margin: 0 auto;
+  margin-top: 150px;
+}
+
+.blogBackground {
+  background-image: url(../captured-final-assets/blog-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -10px;
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  height: 60vh;
+  width: 100%;
 }
 
 .about {
@@ -528,6 +545,10 @@ i {
   height: 500px;
 }
 
+h2 {
+  font-size: 2.1rem;
+}
+
 .wrapper.profile {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,6 +590,65 @@ i {
   padding: 100px 80px 100px 80px;
 }
 
+.blogPage {
+  background-color: #EFFDF3;
+}
+
+.wrapper.blogPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+}
+.wrapper.blogPage main {
+  width: 69%;
+  margin-right: 30px;
+  background-color: #EFFDF3;
+}
+.wrapper.blogPage main .textContainer {
+  border-left: 5px solid #FDFA69;
+  border-bottom: 5px solid #FDFA69;
+  padding: 35px;
+  padding-bottom: 0;
+}
+.wrapper.blogPage aside {
+  width: 31%;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin: 100px 60px 0 60px;
+  height: 100%;
+  background-color: #FAFAFA;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+}
+.wrapper.blogPage aside .imgContainer {
+  position: relative;
+  left: -60px;
+  top: -30px;
+  height: auto;
+  width: 110%;
+}
+.wrapper.blogPage aside .textContainer {
+  margin: 0 20px 30px 20px;
+}
+.wrapper.blogPage aside ul {
+  margin-top: 20px;
+}
+.wrapper.blogPage aside li {
+  color: #4CEEA7;
+  line-height: 1.6rem;
+  list-style: inside;
+}
+
+.mainImg {
+  background-color: #FDFA69;
+}
+.mainImg img {
+  -webkit-transform: translate(30px, -30px);
+          transform: translate(30px, -30px);
+}
+
 footer a {
   color: #FAFAFA;
 }
@@ -585,8 +665,4 @@ footer p {
   text-align: center;
   background-color: #2C2C2C;
   color: #EFFDF3;
-}
-
-* {
-  border: 1px solid red;
 }

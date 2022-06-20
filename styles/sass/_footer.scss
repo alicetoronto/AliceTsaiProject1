@@ -1,0 +1,22 @@
+footer {
+    a {
+        color: $white;
+
+        &:visited {
+            color: $seaGreen;
+        }
+
+        &:hover {
+            transform: none;
+        }
+    }
+
+    p {
+        margin: 0;
+        padding: 5px 0;
+        text-align: center;
+        background-color: $black;
+        color: $ice;
+
+    }
+}
