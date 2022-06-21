@@ -64,3 +64,34 @@
     width: 90%;
     max-width: 1300px;
 }
+
+// Contact header
+
+.contactHeader {
+    height: 360px;
+
+    li:nth-child(4) {
+        border-bottom: 3px $seaGreen solid;
+    }
+
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 175px;
+    }
+
+}
+
+.contactBackground {
+    background-image: url(../captured-final-assets/contact-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    height: 60vh;
+    width: 90%;
+    max-width: 1300px;
+}

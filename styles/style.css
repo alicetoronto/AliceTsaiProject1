@@ -274,7 +274,7 @@ a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-a:visited {
+a:link, a:visited {
   color: #2C2C2C;
 }
 a:hover, a:focus {
@@ -357,6 +357,52 @@ nav ul li {
   margin-bottom: 0;
 }
 
+input,
+textarea {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: none;
+}
+input:focus,
+textarea:focus {
+  outline: dotted 2px #4CEEA7;
+}
+
+input {
+  width: calc(50% - 23px);
+  border-bottom: 3px solid #4CEEA7;
+}
+
+textarea {
+  width: 100%;
+  border: 3px solid #4CEEA7;
+}
+
+::-webkit-input-placeholder {
+  color: #2C2C2C;
+  opacity: 100%;
+}
+
+::-moz-placeholder {
+  color: #2C2C2C;
+  opacity: 100%;
+}
+
+:-ms-input-placeholder {
+  color: #2C2C2C;
+  opacity: 100%;
+}
+
+::-ms-input-placeholder {
+  color: #2C2C2C;
+  opacity: 100%;
+}
+
+::placeholder {
+  color: #2C2C2C;
+  opacity: 100%;
+}
+
 .homeHeader {
   background-image: url(../captured-final-assets/header-image.jpg);
   background-size: cover;
@@ -415,6 +461,32 @@ nav ul li {
 
 .blogBackground {
   background-image: url(../captured-final-assets/blog-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  height: 60vh;
+  width: 90%;
+  max-width: 1300px;
+}
+
+.contactHeader {
+  height: 360px;
+}
+.contactHeader li:nth-child(4) {
+  border-bottom: 3px #4CEEA7 solid;
+}
+.contactHeader h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 175px;
+}
+
+.contactBackground {
+  background-image: url(../captured-final-assets/contact-header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -704,49 +776,10 @@ span {
 
 .blogPage form input,
 .blogPage form textarea {
-  margin-bottom: 40px;
-  padding: 20px;
-}
-.blogPage form input:focus,
-.blogPage form textarea:focus {
-  outline: dotted 2px #4CEEA7;
-}
-.blogPage form input {
-  width: calc(50% - 23px);
-  border: none;
-  border-bottom: 3px solid #4CEEA7;
+  background-color: #EFFDF3;
 }
 .blogPage form input:first-of-type {
   margin-right: 40px;
-}
-.blogPage form textarea {
-  width: 100%;
-  border: 3px solid #4CEEA7;
-}
-.blogPage form ::-webkit-input-placeholder {
-  color: #2C2C2C;
-  background-color: #EFFDF3;
-  opacity: 100%;
-}
-.blogPage form ::-moz-placeholder {
-  color: #2C2C2C;
-  background-color: #EFFDF3;
-  opacity: 100%;
-}
-.blogPage form :-ms-input-placeholder {
-  color: #2C2C2C;
-  background-color: #EFFDF3;
-  opacity: 100%;
-}
-.blogPage form ::-ms-input-placeholder {
-  color: #2C2C2C;
-  background-color: #EFFDF3;
-  opacity: 100%;
-}
-.blogPage form ::placeholder {
-  color: #2C2C2C;
-  background-color: #EFFDF3;
-  opacity: 100%;
 }
 
 footer a {

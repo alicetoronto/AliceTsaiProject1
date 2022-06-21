@@ -1,4 +1,4 @@
-// home page "about" section styling
+// Home Page "about" section styling
 .about {
     min-height: 680px;
     .wrapper {
@@ -11,7 +11,7 @@
     }
 }
 
-// home page article section styling
+// Home Page article section styling
 
 .articles {
     width: 100%;
@@ -77,7 +77,7 @@
     z-index: -10;
 }
 
-// home page "links" section styling
+// Home Page "links" section styling
 
 .links {
     width: 100%;
@@ -166,7 +166,7 @@ h2 {
     padding: 100px 80px 100px 80px;
 }
 
-// blog page main and aside styling
+// Blog Page main and aside styling
 .blogPage {
     position: relative;
 }
@@ -259,36 +259,19 @@ span {
     }
 }
 
-//blog page form styling
+// Blog Page form styling
 
 .blogPage form {
-    input, //maybe move this to basestyles
+    input,
     textarea {
-        margin-bottom: 40px;
-        padding: 20px;
-        // outline: none;
-        &:focus{
-            outline: dotted 2px $seaGreen;
-        }
-    }
-    input {
-        width: calc(50% - 23px);
-        border: none;
-        border-bottom: 3px solid $seaGreen;
+        background-color: $ice;
     }
     input:first-of-type {
         margin-right: 40px;
     }
-    textarea {
-        width: 100%;
-        border: 3px solid $seaGreen;
-    }
-    ::placeholder {
-        color: $black;
-        background-color: $ice;
-        opacity: 100%;
-    }
 }
 
-//contact page styling
+// Contact Page styling
+
+
 

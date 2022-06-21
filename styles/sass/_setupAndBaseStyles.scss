@@ -46,6 +46,7 @@ a {
     text-decoration: none;
     display: inline-block;
     transition: 0.3s;
+    &:link,
     &:visited {
         color: $black;
     }
@@ -123,4 +124,29 @@ nav {
             margin-bottom: 0;
         }
     }
+}
+
+input,
+textarea {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: none;
+    &:focus {
+        outline: dotted 2px $seaGreen;
+    }
+}
+
+input {
+    width: calc(50% - 23px);
+    border-bottom: 3px solid $seaGreen;
+}
+
+textarea {
+    width: 100%;
+    border: 3px solid $seaGreen;
+}
+    
+::placeholder {
+    color: $black;
+    opacity: 100%;
 }
