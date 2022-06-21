@@ -12,21 +12,6 @@ html {
     font-size: 125%;
 }
 
-a {
-    text-decoration: none;
-    display: inline-block;
-    transition: 0.3s;
-    &:visited {
-        color: $black;
-    }
-    &:hover,
-    &:focus {
-        transform: scale(1.1);
-    }
-    &:focus {
-        outline: dotted 2px $seaGreen;
-    }
-}
 
 ul {
     list-style: none;
@@ -57,6 +42,22 @@ p {
     line-height: 32px;
 }
 
+a {
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    &:visited {
+        color: $black;
+    }
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+    }
+    &:focus {
+        outline: dotted 2px $seaGreen;
+    }
+}
+
 button,
 .buttonLinks {
     font-family: $headingFont;
@@ -71,6 +72,16 @@ button,
         &:hover,
         &:focus {
             color: $black;
+        }
+}
+
+button {
+    width: 100%;
+    border: none;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        outline: dotted 2px $seaGreen;
         }
 }
 

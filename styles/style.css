@@ -239,23 +239,6 @@ html {
   font-size: 125%;
 }
 
-a {
-  text-decoration: none;
-  display: inline-block;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-a:visited {
-  color: #2C2C2C;
-}
-a:hover, a:focus {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-a:focus {
-  outline: dotted 2px #4CEEA7;
-}
-
 ul {
   list-style: none;
   padding: 0;
@@ -285,6 +268,23 @@ p {
   line-height: 32px;
 }
 
+a {
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+a:visited {
+  color: #2C2C2C;
+}
+a:hover, a:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+a:focus {
+  outline: dotted 2px #4CEEA7;
+}
+
 button,
 .buttonLinks {
   font-family: "Playfair Display", serif;
@@ -301,6 +301,15 @@ button:hover, button:focus,
 .buttonLinks:hover,
 .buttonLinks:focus {
   color: #2C2C2C;
+}
+
+button {
+  width: 100%;
+  border: none;
+}
+button:hover, button:focus {
+  cursor: pointer;
+  outline: dotted 2px #4CEEA7;
 }
 
 .wrapper {
@@ -599,24 +608,19 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   background-color: transparent;
+  margin-bottom: 100px;
 }
 .wrapper.blogPage main {
   width: 69%;
   margin-right: 30px;
   background-color: #EFFDF3;
 }
-.wrapper.blogPage main .textContainer {
-  border-left: 5px solid #FDFA69;
-  border-bottom: 5px solid #FDFA69;
-  padding: 35px;
-  padding-bottom: 0;
-}
 .wrapper.blogPage aside {
   width: 31%;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  margin: 100px 60px 0 60px;
+  margin: 150px 60px 0 60px;
   height: 100%;
   background-color: #FAFAFA;
   -webkit-transform: translateY(200px);
@@ -641,6 +645,11 @@ h2 {
   list-style: inside;
 }
 
+span {
+  font-weight: bold;
+  font-style: italic;
+}
+
 .mainImg {
   background-color: #FDFA69;
 }
@@ -649,11 +658,89 @@ h2 {
           transform: translate(30px, -30px);
 }
 
+.blogPost .textContainer {
+  border-left: 5px solid #FDFA69;
+  border-bottom: 5px solid #FDFA69;
+  padding: 35px;
+  padding-bottom: 0;
+}
+
+.comments {
+  padding: 35px;
+}
+.comments article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 55px 0;
+}
+.comments .imgContainer {
+  width: 10%;
+  min-width: 80px;
+}
+.comments .textContainer {
+  width: 90%;
+  padding-left: 35px;
+}
+.comments p {
+  margin: 0;
+}
+.comments p:first-child {
+  margin-bottom: 8px;
+}
+
+.blogPage form input,
+.blogPage form textarea {
+  margin-bottom: 40px;
+  padding: 20px;
+}
+.blogPage form input:focus,
+.blogPage form textarea:focus {
+  outline: dotted 2px #4CEEA7;
+}
+.blogPage form input {
+  width: calc(50% - 23px);
+  border: none;
+  border-bottom: 3px solid #4CEEA7;
+}
+.blogPage form input:first-of-type {
+  margin-right: 40px;
+}
+.blogPage form textarea {
+  width: 100%;
+  border: 3px solid #4CEEA7;
+}
+.blogPage form ::-webkit-input-placeholder {
+  color: #2C2C2C;
+  background-color: #EFFDF3;
+  opacity: 100%;
+}
+.blogPage form ::-moz-placeholder {
+  color: #2C2C2C;
+  background-color: #EFFDF3;
+  opacity: 100%;
+}
+.blogPage form :-ms-input-placeholder {
+  color: #2C2C2C;
+  background-color: #EFFDF3;
+  opacity: 100%;
+}
+.blogPage form ::-ms-input-placeholder {
+  color: #2C2C2C;
+  background-color: #EFFDF3;
+  opacity: 100%;
+}
+.blogPage form ::placeholder {
+  color: #2C2C2C;
+  background-color: #EFFDF3;
+  opacity: 100%;
+}
+
 footer a {
   color: #FAFAFA;
 }
 footer a:visited {
-  color: #4CEEA7;
+  color: #FAFAFA;
 }
 footer a:hover {
   -webkit-transform: none;

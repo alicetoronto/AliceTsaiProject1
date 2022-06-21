@@ -173,24 +173,18 @@ h2 {
 .wrapper.blogPage {
     display: flex;
     background-color: transparent;
+    margin-bottom: 100px;
     main {
         width: 69%;
         margin-right: 30px;
         background-color: $ice;
-
-        .textContainer {
-            border-left: 5px solid $canary;
-            border-bottom: 5px solid $canary;
-            padding: 35px;
-            padding-bottom: 0;
-        }
     }
     aside {
         // position: sticky;
         // top: 0;
         width: 31%;
         order: -1;
-        margin: 100px 60px 0 60px;
+        margin: 150px 60px 0 60px;
         height: 100%;
         background-color: $white;
         transform: translateY(200px);
@@ -215,9 +209,73 @@ h2 {
     }
 }
 
+span {
+    font-weight: bold;
+    font-style: italic;
+}
 .mainImg {
     background-color: $canary;
     img {
         transform: translate(30px, -30px);
+    }
+}
+
+.blogPost .textContainer {
+    border-left: 5px solid $canary;
+    border-bottom: 5px solid $canary;
+    padding: 35px;
+    padding-bottom: 0;
+}
+
+.comments {
+    padding: 35px;
+    article {
+        display: flex;
+        padding: 55px 0;
+    }
+    .imgContainer {
+        width: 10%;
+        min-width: 80px;
+    }
+    .textContainer {
+        width: 90%;
+        padding-left: 35px;
+    }
+    p {
+        margin: 0;
+    }
+    p:first-child {
+        margin-bottom: 8px;
+    }
+}
+
+//blog page form styling
+
+.blogPage form {
+    input, //maybe move this to basestyles
+    textarea {
+        margin-bottom: 40px;
+        padding: 20px;
+        // outline: none;
+        &:focus{
+            outline: dotted 2px $seaGreen;
+        }
+    }
+    input {
+        width: calc(50% - 23px);
+        border: none;
+        border-bottom: 3px solid $seaGreen;
+    }
+    input:first-of-type {
+        margin-right: 40px;
+    }
+    textarea {
+        width: 100%;
+        border: 3px solid $seaGreen;
+    }
+    ::placeholder {
+        color: $black;
+        background-color: $ice;
+        opacity: 100%;
     }
 }
