@@ -401,7 +401,7 @@ nav ul li {
 }
 
 .blogHeader {
-  height: 345px;
+  height: 360px;
 }
 .blogHeader li:nth-child(3) {
   border-bottom: 3px #4CEEA7 solid;
@@ -410,19 +410,20 @@ nav ul li {
   font-size: 4rem;
   text-align: center;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 175px;
 }
 
 .blogBackground {
   background-image: url(../captured-final-assets/blog-header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center -70px;
+  background-position: center;
   position: absolute;
   z-index: -10;
   top: 0;
   height: 60vh;
-  width: 100%;
+  width: 90%;
+  max-width: 1300px;
 }
 
 .about {
@@ -498,7 +499,7 @@ nav ul li {
   right: -40px;
 }
 
-.fullBleedContainer {
+.articles .fullBleedContainer {
   height: 500px;
   width: 100%;
   background-color: #EFFDF3;
@@ -533,7 +534,7 @@ nav ul li {
   margin-right: 30px;
 }
 
-i {
+.links i {
   background-color: #4CEEA7;
   background-position: center;
   border-radius: 50%;
@@ -586,6 +587,9 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .gallery li {
   width: calc(33.3333333333% - 23.3333333333px);
@@ -600,7 +604,16 @@ h2 {
 }
 
 .blogPage {
+  position: relative;
+}
+
+.blogPage .fullBleedContainer {
+  height: calc(100% - 60vh);
+  width: 100%;
   background-color: #EFFDF3;
+  position: absolute;
+  z-index: -20;
+  top: 60vh;
 }
 
 .wrapper.blogPage {

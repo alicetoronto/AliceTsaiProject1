@@ -39,7 +39,7 @@
 // Blog header
 
 .blogHeader {
-    height: 345px;
+    height: 360px;
     li:nth-child(3) {
     border-bottom: 3px $seaGreen solid;
     }
@@ -47,18 +47,20 @@
         font-size: 4rem;
         text-align: center;
         margin: 0 auto;
-        margin-top: 150px;
+        margin-top: 175px;
     }
+    
 }
 
 .blogBackground {
     background-image: url(../captured-final-assets/blog-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -70px;
+    background-position: center;
     position: absolute;
     z-index: -10;
     top: 0;
     height: 60vh;
-    width: 100%;
+    width: 90%;
+    max-width: 1300px;
 }

@@ -68,7 +68,7 @@
     }
 }
 
-.fullBleedContainer {
+.articles .fullBleedContainer {
     height: 500px;
     width: 100%;
     background-color: $ice;
@@ -101,7 +101,7 @@
 }
 
 
-i {
+.links i {
     background-color: $seaGreen;
     background-position: center;
     border-radius: 50%;
@@ -151,6 +151,7 @@ h2 {
     ul {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     li {
         width: calc((100% / 3) - (70px / 3));
@@ -167,7 +168,16 @@ h2 {
 
 // blog page main and aside styling
 .blogPage {
+    position: relative;
+}
+
+.blogPage .fullBleedContainer {
+    height: calc(100% - 60vh);
+    width: 100%;
     background-color: $ice;
+    position: absolute;
+    z-index: -20;
+    top: 60vh;
 }
 
 .wrapper.blogPage {
@@ -279,3 +289,6 @@ span {
         opacity: 100%;
     }
 }
+
+//contact page styling
+
