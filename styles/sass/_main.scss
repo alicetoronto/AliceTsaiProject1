@@ -15,11 +15,12 @@
 
 .articles {
     width: 100%;
-}
-
-.wrapper.articles {
     position: relative;
 }
+
+// .wrapper.articles {
+//     position: relative;
+// }
 
 .skills,
 .gear {
@@ -70,11 +71,7 @@
 
 .articles .fullBleedContainer {
     height: 500px;
-    width: 100%;
-    background-color: $ice;
-    position: absolute;
-    top: 2080px;
-    z-index: -10;
+    bottom: -450px;
 }
 
 // Home Page "links" section styling
@@ -122,7 +119,7 @@
     height: 500px;
 }
 
-// home page profile section styling
+// Home Page profile section styling
 
 h2 {
     font-size: 2.1rem;
@@ -166,17 +163,13 @@ h2 {
     padding: 100px 80px 100px 80px;
 }
 
-// Blog Page main and aside styling
+// Blog Page general layout styling
 .blogPage {
     position: relative;
 }
 
 .blogPage .fullBleedContainer {
     height: calc(100% - 60vh);
-    width: 100%;
-    background-color: $ice;
-    position: absolute;
-    z-index: -20;
     top: 60vh;
 }
 
@@ -188,16 +181,16 @@ h2 {
         width: 69%;
         margin-right: 30px;
         background-color: $ice;
+        order: 1;
     }
     aside {
         // position: sticky;
         // top: 0;
         width: 31%;
-        order: -1;
-        margin: 150px 60px 0 60px;
+        margin: 0 60px;
         height: 100%;
         background-color: $white;
-        transform: translateY(200px);
+        transform: translateY(350px);
         .imgContainer {
             position: relative;
             left: -60px;
@@ -226,7 +219,7 @@ span {
 .mainImg {
     background-color: $canary;
     img {
-        transform: translate(30px, -30px);
+        transform: translate(31px, -30px);
     }
 }
 
@@ -259,19 +252,55 @@ span {
     }
 }
 
-// Blog Page form styling
-
-.blogPage form {
-    input,
-    textarea {
-        background-color: $ice;
-    }
-    input:first-of-type {
-        margin-right: 40px;
-    }
-}
 
 // Contact Page styling
 
+.contactPage.wrapper {
+    display: flex;
+    padding: 0 110px 100px 80px;
+}
+
+.contactPage {
+    // main section styling
+    main {
+            width: 70%;
+            order: 1;
+            background-color: $canary;
+    }
+    form {
+        background-color: $white;
+        padding: 50px;
+        transform: translate(30px, -30px);
+    }
+    input,
+    textarea {
+        background-color: $white;
+    }
+    //aside section styling
+    aside {
+        width: 30%;
+        height: 100%;
+        margin-right: 30px;
+        // background-color: $ice;
+        transform: translateY(300px);
+    }
+    .contactEmail {
+        text-transform: uppercase;
+        font-family: $headingFont;
+        margin: 18px 0;
+    }
+    address {
+        font-style: normal;
+    }
+    .socialMedia {
+        display: flex;
+        width: 37%;
+        justify-content: space-between;
+    }
+    .fullBleedContainer {
+        height: calc(100% - 40vh);
+        top: 60vh;
+    }
+}
 
 

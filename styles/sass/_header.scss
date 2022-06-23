@@ -4,6 +4,7 @@
     background-image: url(../captured-final-assets/header-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
     height: 75vh;
     max-height: 755px;
     position: relative;
@@ -39,7 +40,7 @@
 // Blog header
 
 .blogHeader {
-    height: 360px;
+    height: 365px;
     li:nth-child(3) {
     border-bottom: 3px $seaGreen solid;
     }
@@ -56,7 +57,7 @@
     background-image: url(../captured-final-assets/blog-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 20px;
     position: absolute;
     z-index: -10;
     top: 0;
@@ -68,7 +69,7 @@
 // Contact header
 
 .contactHeader {
-    height: 360px;
+    height: 365px;
 
     li:nth-child(4) {
         border-bottom: 3px $seaGreen solid;
@@ -87,7 +88,7 @@
     background-image: url(../captured-final-assets/contact-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 20px;
     position: absolute;
     z-index: -10;
     top: 0;

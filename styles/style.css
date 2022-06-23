@@ -362,6 +362,7 @@ textarea {
   margin-bottom: 40px;
   padding: 20px;
   border: none;
+  background-color: #EFFDF3;
 }
 input:focus,
 textarea:focus {
@@ -371,6 +372,9 @@ textarea:focus {
 input {
   width: calc(50% - 23px);
   border-bottom: 3px solid #4CEEA7;
+}
+input:first-of-type {
+  margin-right: 40px;
 }
 
 textarea {
@@ -403,10 +407,18 @@ textarea {
   opacity: 100%;
 }
 
+.fullBleedContainer {
+  width: 100%;
+  background-color: #EFFDF3;
+  position: absolute;
+  z-index: -20;
+}
+
 .homeHeader {
   background-image: url(../captured-final-assets/header-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
   height: 75vh;
   max-height: 755px;
   position: relative;
@@ -447,7 +459,7 @@ textarea {
 }
 
 .blogHeader {
-  height: 360px;
+  height: 365px;
 }
 .blogHeader li:nth-child(3) {
   border-bottom: 3px #4CEEA7 solid;
@@ -463,7 +475,7 @@ textarea {
   background-image: url(../captured-final-assets/blog-header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 20px;
   position: absolute;
   z-index: -10;
   top: 0;
@@ -473,7 +485,7 @@ textarea {
 }
 
 .contactHeader {
-  height: 360px;
+  height: 365px;
 }
 .contactHeader li:nth-child(4) {
   border-bottom: 3px #4CEEA7 solid;
@@ -489,7 +501,7 @@ textarea {
   background-image: url(../captured-final-assets/contact-header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 20px;
   position: absolute;
   z-index: -10;
   top: 0;
@@ -512,9 +524,6 @@ textarea {
 
 .articles {
   width: 100%;
-}
-
-.wrapper.articles {
   position: relative;
 }
 
@@ -573,11 +582,7 @@ textarea {
 
 .articles .fullBleedContainer {
   height: 500px;
-  width: 100%;
-  background-color: #EFFDF3;
-  position: absolute;
-  top: 2080px;
-  z-index: -10;
+  bottom: -450px;
 }
 
 .links {
@@ -681,10 +686,6 @@ h2 {
 
 .blogPage .fullBleedContainer {
   height: calc(100% - 60vh);
-  width: 100%;
-  background-color: #EFFDF3;
-  position: absolute;
-  z-index: -20;
   top: 60vh;
 }
 
@@ -699,17 +700,17 @@ h2 {
   width: 69%;
   margin-right: 30px;
   background-color: #EFFDF3;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 .wrapper.blogPage aside {
   width: 31%;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-  margin: 150px 60px 0 60px;
+  margin: 0 60px;
   height: 100%;
   background-color: #FAFAFA;
-  -webkit-transform: translateY(200px);
-          transform: translateY(200px);
+  -webkit-transform: translateY(350px);
+          transform: translateY(350px);
 }
 .wrapper.blogPage aside .imgContainer {
   position: relative;
@@ -739,8 +740,8 @@ span {
   background-color: #FDFA69;
 }
 .mainImg img {
-  -webkit-transform: translate(30px, -30px);
-          transform: translate(30px, -30px);
+  -webkit-transform: translate(31px, -30px);
+          transform: translate(31px, -30px);
 }
 
 .blogPost .textContainer {
@@ -774,12 +775,57 @@ span {
   margin-bottom: 8px;
 }
 
-.blogPage form input,
-.blogPage form textarea {
-  background-color: #EFFDF3;
+.contactPage.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 110px 100px 80px;
 }
-.blogPage form input:first-of-type {
-  margin-right: 40px;
+
+.contactPage main {
+  width: 70%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background-color: #FDFA69;
+}
+.contactPage form {
+  background-color: #FAFAFA;
+  padding: 50px;
+  -webkit-transform: translate(30px, -30px);
+          transform: translate(30px, -30px);
+}
+.contactPage input,
+.contactPage textarea {
+  background-color: #FAFAFA;
+}
+.contactPage aside {
+  width: 30%;
+  height: 100%;
+  margin-right: 30px;
+  -webkit-transform: translateY(300px);
+          transform: translateY(300px);
+}
+.contactPage .contactEmail {
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  margin: 18px 0;
+}
+.contactPage address {
+  font-style: normal;
+}
+.contactPage .socialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 37%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contactPage .fullBleedContainer {
+  height: calc(100% - 40vh);
+  top: 60vh;
 }
 
 footer a {

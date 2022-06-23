@@ -131,6 +131,7 @@ textarea {
     margin-bottom: 40px;
     padding: 20px;
     border: none;
+    background-color: $ice;
     &:focus {
         outline: dotted 2px $seaGreen;
     }
@@ -139,6 +140,9 @@ textarea {
 input {
     width: calc(50% - 23px);
     border-bottom: 3px solid $seaGreen;
+    &:first-of-type {
+        margin-right: 40px;
+    }
 }
 
 textarea {
@@ -149,4 +153,11 @@ textarea {
 ::placeholder {
     color: $black;
     opacity: 100%;
+}
+
+.fullBleedContainer {
+    width: 100%;
+    background-color: $ice;
+    position: absolute;
+    z-index: -20;
 }
