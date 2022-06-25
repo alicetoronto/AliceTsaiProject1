@@ -446,8 +446,10 @@ textarea {
   background-image: url(../captured-final-assets/header-box-image.jpg);
   background-size: cover;
   background-position: center;
-  height: 475px;
-  width: 475px;
+  height: 40vw;
+  max-height: 410px;
+  width: 40vw;
+  max-width: 410px;
   border: 40px solid #FDFA69;
   border-right: none;
   -webkit-box-sizing: content-box;
@@ -844,40 +846,4 @@ footer p {
   text-align: center;
   background-color: #2C2C2C;
   color: #EFFDF3;
-}
-
-@media (max-width: 1450px) {
-  .homeHeader {
-    height: 60vh;
-    background-position: 15% 50%;
-  }
-  .homeHeader h1 {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin-right: 40px;
-    bottom: 20px;
-  }
-
-  .boxImage {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    bottom: -620px;
-  }
-
-  .about .wrapper {
-    padding-right: 550px;
-  }
-  .about h2 {
-    padding-top: 28%;
-  }
-}
-@media (max-width: 1150px) {
-  .homeHeader {
-    height: 50vh;
-  }
-  .homeHeader .boxImage {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    bottom: -620px;
-  }
 }

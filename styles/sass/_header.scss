@@ -28,8 +28,10 @@
     background-image: url(../captured-final-assets/header-box-image.jpg);
     background-size: cover;
     background-position: center;
-    height: 475px;
-    width: 475px;
+    height: 40vw;
+    max-height: 410px;
+    width: 40vw;
+    max-width: 410px;
     border: 40px solid $canary;
     border-right: none;
     box-sizing: content-box;
