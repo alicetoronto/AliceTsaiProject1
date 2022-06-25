@@ -327,7 +327,6 @@ img {
 
 .imgContainer {
   height: 100%;
-  min-width: 300px;
 }
 
 .about,
@@ -446,8 +445,9 @@ textarea {
 .boxImage {
   background-image: url(../captured-final-assets/header-box-image.jpg);
   background-size: cover;
-  height: 510px;
-  width: 510px;
+  background-position: center;
+  height: 475px;
+  width: 475px;
   border: 40px solid #FDFA69;
   border-right: none;
   -webkit-box-sizing: content-box;
@@ -640,9 +640,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 100px 80px 60px 120px;
+  padding: 130px 80px 60px 120px;
 }
 .wrapper.profile .imgContainer {
   background-color: #FDFA69;
@@ -651,6 +649,8 @@ h2 {
 .wrapper.profile .textContainer {
   width: calc(70% - 80px);
   margin-left: 80px;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
 }
 .wrapper.profile img {
   position: relative;
@@ -662,15 +662,12 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 .gallery li {
   width: calc(33.3333333333% - 23.3333333333px);
-  min-width: 300px;
 }
 .gallery li:nth-child(2) {
   margin: 0 35px;
@@ -782,6 +779,9 @@ span {
   padding: 0 110px 100px 80px;
 }
 
+.contactPage {
+  position: relative;
+}
 .contactPage main {
   width: 70%;
   -webkit-box-ordinal-group: 2;
@@ -824,7 +824,7 @@ span {
           justify-content: space-between;
 }
 .contactPage .fullBleedContainer {
-  height: calc(100% - 40vh);
+  height: calc(100% - 60vh);
   top: 60vh;
 }
 
@@ -844,4 +844,40 @@ footer p {
   text-align: center;
   background-color: #2C2C2C;
   color: #EFFDF3;
+}
+
+@media (max-width: 1450px) {
+  .homeHeader {
+    height: 60vh;
+    background-position: 15% 50%;
+  }
+  .homeHeader h1 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-right: 40px;
+    bottom: 20px;
+  }
+
+  .boxImage {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    bottom: -620px;
+  }
+
+  .about .wrapper {
+    padding-right: 550px;
+  }
+  .about h2 {
+    padding-top: 28%;
+  }
+}
+@media (max-width: 1150px) {
+  .homeHeader {
+    height: 50vh;
+  }
+  .homeHeader .boxImage {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    bottom: -620px;
+  }
 }

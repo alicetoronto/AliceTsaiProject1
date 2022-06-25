@@ -127,8 +127,8 @@ h2 {
 
 .wrapper.profile {
     display: flex;
-    flex-wrap: wrap;
-    padding: 100px 80px 60px 120px;
+    // flex-wrap: wrap;
+    padding: 130px 80px 60px 120px;
     .imgContainer {
         background-color: $canary;
         width: 30%;
@@ -136,6 +136,7 @@ h2 {
     .textContainer {
         width: calc(70% - 80px);
         margin-left: 80px;
+        transform: translateY(-30px);
     }
     img {
         position: relative;
@@ -147,12 +148,12 @@ h2 {
 .gallery {
     ul {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         justify-content: center;
     }
     li {
         width: calc((100% / 3) - (70px / 3));
-        min-width: 300px;
+        // min-width: 300px;
     }
     li:nth-child(2) {
         margin: 0 35px;
@@ -261,6 +262,7 @@ span {
 }
 
 .contactPage {
+    position: relative;
     // main section styling
     main {
             width: 70%;
@@ -298,7 +300,7 @@ span {
         justify-content: space-between;
     }
     .fullBleedContainer {
-        height: calc(100% - 40vh);
+        height: calc(100% - 60vh);
         top: 60vh;
     }
 }

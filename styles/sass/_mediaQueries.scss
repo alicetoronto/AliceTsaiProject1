@@ -1,0 +1,46 @@
+// Home page 1450px
+@media (max-width: 1450px) {
+.homeHeader {
+    height: 60vh;
+    background-position: 15% 50%;
+    h1 {
+        align-self: flex-end;
+        margin-right: 40px;
+        bottom: 20px;
+    }
+}
+
+.boxImage {
+    align-self: flex-end;
+    bottom: -620px;
+}
+
+.about {
+    .wrapper {
+        padding-right: 550px;
+    }
+    h2 {
+        padding-top: 28%;
+    }
+}
+} // end of Home page 1450px
+
+// Home page 1150px (tablet horizontal)
+@media (max-width: 1150px) {
+.homeHeader {
+    height: 50vh;
+    // background-position: right;
+    //     h1 {
+    //         align-self: flex-end;
+    //         margin-right: 40px;
+    //         bottom: 30px;
+    //     }
+    // }
+
+    .boxImage {
+        align-self: flex-end;
+        bottom: -620px;
+    }
+
+}
+}
