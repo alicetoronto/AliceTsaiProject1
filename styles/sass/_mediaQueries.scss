@@ -1,48 +1,140 @@
-// Home page 1450px
-@media (max-width: 1450px) {
-    // .homeHeader {
-    //     height: 70vh;
-    //     background-position: 15% top;
-    //     h1 {
-    //         // align-self: flex-end;
-    //         // margin-right: 40px;
-    //         // bottom: 20px;
-    //     }
-    // }
+// Home page 1360px - laptop screen
+@media (max-width: 1360px) {
+    .homeHeader {
+        height: 60vh;
+        background-position: 15% top;
+        h1 {
+            align-self: flex-end;
+            margin-right: 40px;
+            bottom: 15px;
+            font-size: calc(5.5rem + 1vw);
+        }
+    }
 
-    // .boxImage {
-    //     align-self: flex-end;
-    //     bottom: -280px;
-    //     width: 30vw;
-    //     height: 50vh;
-    // }
+    nav {
+        ul {
+            margin-right: 40px;
+        }
+    }
 
-    // .about {
-    //     .wrapper {
-    //         padding-right: 550px;
-    //     }
-    //     h2 {
-    //         padding-top: 28%;
-    //     }
-    // }
-} // end of Home page 1450px
+    .boxImage {
+        align-self: flex-end;
+        top: 37.5vh;
+        height: 40vw;
+        max-height: none;
+        width: 40vw;
+    }
 
-// Home page 1150px (tablet horizontal)
-// @media (max-width: 1150px) {
-// .homeHeader {
-//     height: 50vh;
-//     // background-position: right;
-//     //     h1 {
-//     //         align-self: flex-end;
-//     //         margin-right: 40px;
-//     //         bottom: 30px;
-//     //     }
-//     // }
+    .about {
+        min-height: 800px;
+        h2 {
+            padding-top: 48%;
+        }
+    }
+} // end of Home page 1360px
 
-//     .boxImage {
-//         align-self: flex-end;
-//         bottom: -620px;
-//     }
+//Home page 1000px - tablet horizontal
+@media (max-width: 1000px) {
+    .homeHeader {
+        h1 {
+            font-size: calc(4.5rem + 1vw);
+        }
+    }
 
-// }
-// }
+    .boxImage {
+        top: 68vh;
+    }
+    .about {
+        .wrapper {
+            padding-right: 48vw;
+        }
+        h2 {
+            padding-top: 20%;
+            text-align: left;
+        }
+    }
+} // end of Home page 1000x;
+
+// Home page 915px - tablet
+@media (max-width: 915px) {
+    .homeHeader {
+        height: 20vh;
+        background-position: right 85%;
+
+        h1 {
+            // align-self: flex-end;
+            margin-right: 30px;
+            bottom: 0px;
+            font-size: calc(3.1rem + 1vw);
+        }
+    }
+    nav {
+        font-size: 0.9rem;
+        width: 60%;
+        align-self: flex-end;
+        ul {
+            margin-right: 30px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            li {
+                padding: 5px;
+                margin: 0 10px;
+            }
+        }
+    }
+    .boxImage {
+        top: calc(93vh - 30vw);
+        height: 40vw;
+        width:  40vw;
+        border: 25px solid $canary;
+        border-right: none;
+    }
+    .about {
+        .wrapper {
+            padding: 0 40px;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: calc(1.5rem + 1vw);
+            padding-top: 100px;
+            // text-align: center;
+        }
+        .buttonLinks {
+            margin: 0;
+        }
+    }
+
+
+}
+//650px
+@media (max-width: 650px) {
+    .wrapper {
+        width: 100%;
+    }
+    .homeHeader {
+        h1 {
+            // bottom: 18px;
+            font-size: calc(2.5rem + 1vw);
+        }
+    }
+    .boxImage {
+        // display: none;
+        top: 20vh;
+        height: 40vw;
+        width: 50%;
+        border: 25px solid $canary;
+        // border-right: none;
+
+    }
+    nav {
+        visibility: hidden;
+    }
+
+
+}
+
+
+// hamburger menu
+
+//570px
