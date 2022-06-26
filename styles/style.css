@@ -423,9 +423,8 @@ textarea {
   background-image: url(../captured-final-assets/header-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: -20px, 50%;
   width: 100%;
-  height: 75vh;
+  height: 65vh;
   max-height: 755px;
   position: relative;
   display: -webkit-box;
@@ -453,17 +452,17 @@ textarea {
   background-image: url(../captured-final-assets/header-box-image.jpg);
   background-size: cover;
   background-position: center;
-  height: 32vw;
-  max-height: 480px;
-  width: 32vw;
-  max-width: 480px;
-  border: 40px solid #FDFA69;
+  height: 35vw;
+  max-height: 485px;
+  width: 35vw;
+  max-width: 485px;
+  border: 48px solid #FDFA69;
   border-right: none;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   position: absolute;
   z-index: 10;
-  bottom: -180px;
+  bottom: -237px;
   right: 0;
 }
 
@@ -528,7 +527,7 @@ textarea {
 }
 .about h2 {
   font-size: 2.1rem;
-  padding-top: 230px;
+  padding-top: calc(230px + 5vw);
 }
 
 .articles {
@@ -851,123 +850,107 @@ footer p {
   color: #EFFDF3;
 }
 
-@media (max-width: 1360px) {
-  .homeHeader {
-    height: 60vh;
-    background-position: 15% top;
-  }
-  .homeHeader h1 {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin-right: 40px;
-    bottom: 15px;
-    font-size: calc(5.5rem + 1vw);
-  }
-
-  nav ul {
-    margin-right: 40px;
-  }
-
-  .boxImage {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    top: 37.5vh;
-    height: 40vw;
-    max-height: none;
-    width: 40vw;
-  }
-
-  .about {
-    min-height: 800px;
-  }
-  .about h2 {
-    padding-top: 48%;
-  }
-}
-@media (max-width: 1000px) {
-  .homeHeader h1 {
-    font-size: calc(4.5rem + 1vw);
-  }
-
-  .boxImage {
-    top: 68vh;
-  }
-
-  .about .wrapper {
-    padding-right: 48vw;
-  }
-  .about h2 {
-    padding-top: 20%;
-    text-align: left;
-  }
-}
-@media (max-width: 915px) {
-  .homeHeader {
-    height: 20vh;
-    background-position: right 85%;
-  }
-  .homeHeader h1 {
-    margin-right: 30px;
-    bottom: 0px;
-    font-size: calc(3.1rem + 1vw);
-  }
-
-  nav {
-    font-size: 0.9rem;
-    width: 60%;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-  }
-  nav ul {
-    margin-right: 30px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  nav ul li {
-    padding: 5px;
-    margin: 0 10px;
-  }
-
-  .boxImage {
-    top: calc(93vh - 30vw);
-    height: 40vw;
-    width: 40vw;
-    border: 25px solid #FDFA69;
-    border-right: none;
-  }
-
-  .about .wrapper {
-    padding: 0 40px;
-    text-align: left;
-  }
-  .about h2 {
-    font-size: calc(1.5rem + 1vw);
-    padding-top: 100px;
-  }
-  .about .buttonLinks {
-    margin: 0;
-  }
-}
-@media (max-width: 650px) {
+@media (max-width: 1390px) {
   .wrapper {
     width: 100%;
   }
 
+  nav ul {
+    margin-right: 40px;
+  }
+
+  .homeHeader {
+    height: 60vh;
+  }
   .homeHeader h1 {
-    font-size: calc(2.5rem + 1vw);
+    font-size: calc(5.3rem + 1vw);
+    bottom: 10px;
   }
 
   .boxImage {
-    top: 20vh;
+    height: 34vw;
+    width: 34vw;
+    right: 0;
+  }
+}
+@media (max-width: 1250px) {
+  .homeHeader h1 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-right: 40px;
+  }
+
+  .boxImage {
+    top: calc(320px + 5vw);
     height: 40vw;
-    width: 50%;
-    border: 25px solid #FDFA69;
+    max-height: none;
+    width: 40vw;
+    max-width: none;
+    border: 35px solid #FDFA69;
+    border-right: none;
+  }
+
+  .about {
+    min-height: 500px;
+  }
+  .about .wrapper {
+    padding-right: 48vw;
+    text-align: left;
+  }
+  .about h2 {
+    padding-top: 20%;
+  }
+}
+@media (max-width: 1080px) {
+  .homeHeader {
+    height: 50vh;
+  }
+  .homeHeader h1 {
+    font-size: calc(4.3rem + 1vw);
+  }
+
+  .boxImage {
+    display: none;
+  }
+
+  .about .wrapper {
+    padding-right: 80px;
+  }
+  .about h2 {
+    padding-top: 10%;
   }
 
   nav {
-    visibility: hidden;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 775px) {
+  .homeHeader {
+    height: 100vh;
+    background-position: right 50%;
+  }
+  .homeHeader h1 {
+    font-size: calc(1.5rem + 5vw);
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-right: 0;
+    top: 35%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .boxImage {
+    display: block;
+    bottom: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
+    border: calc(2px + 5vw) solid #FDFA69;
+    width: 80vw;
+    height: 80vw;
+    max-width: 320px;
+    max-height: 320px;
   }
 }

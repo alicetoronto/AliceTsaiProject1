@@ -4,9 +4,8 @@
     background-image: url(../captured-final-assets/header-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -20px, 50%;
     width: 100%;
-    height: 75vh;
+    height: 65vh;
     max-height: 755px;
     position: relative;
     display: flex;
@@ -28,16 +27,16 @@
     background-image: url(../captured-final-assets/header-box-image.jpg);
     background-size: cover;
     background-position: center;
-    height: 32vw;
-    max-height: 480px;
-    width: 32vw;
-    max-width: 480px;
-    border: 40px solid $canary;
+    height: 35vw;
+    max-height: 485px;
+    width: 35vw;
+    max-width: 485px;
+    border: 48px solid $canary;
     border-right: none;
     box-sizing: content-box;
     position: absolute;
     z-index: 10;
-    bottom: -180px;
+    bottom: -237px;
     right: 0;
 }
 
