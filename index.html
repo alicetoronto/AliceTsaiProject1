@@ -15,6 +15,8 @@
 <body>
     <div class="wrapper">
         <header class="homeHeader">
+            <!-- Skip Link -->
+            <a href="#mainContent" class="skip-link">Skip to main content</a>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -24,6 +26,7 @@
                 </ul>
             </nav>
             <div class="slideOutIcon">
+                <label for="slideOut"></label>
                 <i class="fa-solid fa-ellipsis-vertical" aria-hidden=“true”></i>
             </div>
             <h1>Captured</h1>
@@ -32,7 +35,7 @@
             </div>
         </header>
     </div> <!-- end of wrapper -->
-    <main>
+    <main id="mainContent">
         <section class="about" id="about">
             <div class="wrapper">
                 <h2>What is Captured?</h2>
@@ -63,38 +66,46 @@
                         </div> <!-- end of textContainer-->
                     </article> <!-- end of Gear article -->
                 </div> <!-- end of wrapper -->
-                <div class="fullBleedContainer">
-                    <!-- full bleed in $ice -->
-                </div>
             </section> <!-- end of articles section -->
         <section class="links">
+            <div class="fullBleedContainer">
+                <!-- full bleed in $ice -->
+            </div>
             <div class="wrapper links">
                 <div class="linkItems topPicks">
-                    <a href="#">
-                        <i class="fa-solid fa-camera" aria-hidden=“true”></i>
+                    <a href="#" title="Go to Top Picks page">
+                        <div class="iconContainer">
+                            <i class="fa-solid fa-camera" aria-hidden=“true”></i>
+                        </div>
                         <h3>Top Picks</h3>
                     </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus ipsum esse, dolorum impedit nulla tempore sint. Suscipit, ab nisi!</p>
                 </div>
                 <div class="linkItems community">
-                    <a href="#">
-                        <i class="fa-solid fa-users" aria-hidden=“true”></i>
+                    <a href="#" title="Go to Community page">
+                        <div class="iconContainer">
+                            <i class="fa-solid fa-users" aria-hidden=“true”></i>
+                        </div>
                         <h3>Community</h3>
                     </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus ipsum esse, dolorum impedit nulla tempore sint.
                     Suscipit, ab nisi!</p>
                 </div>
                 <div class="linkItems blog">
-                    <a href="./blog.html">
-                        <i class="fa-solid fa-file" aria-hidden=“true”></i>
+                    <a href="./blog.html" title="Go to Blog page">
+                        <div class="iconContainer">
+                            <i class="fa-solid fa-file" aria-hidden=“true”></i>
+                        </div>
                         <h3>Blog</h3>
                     </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus ipsum esse, dolorum impedit nulla tempore sint.
                     Suscipit, ab nisi!</p>
                 </div>
                 <div class="linkItems contact">
-                    <a href="./contact.html">
-                        <i class="fa-solid fa-phone-flip" aria-hidden=“true></i>
+                    <a href="./contact.html" title="Go to Contact page">
+                        <div class="iconContainer">
+                            <i class="fa-solid fa-phone-flip" aria-hidden=“true></i>
+                        </div>
                         <h3>Get in Touch</h3>
                     </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus ipsum esse, dolorum impedit nulla tempore sint.

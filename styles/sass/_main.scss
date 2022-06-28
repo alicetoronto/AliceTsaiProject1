@@ -1,13 +1,13 @@
 // Home Page "about" section styling
+h2 {
+    font-size: 2.1rem;
+}
 .about {
+    padding-top: calc(230px + 5vw);
     padding-bottom: 200px;
     .wrapper {
         padding: 0 80px;
         text-align: center;
-    }
-    h2 {
-        font-size: 2.1rem;
-        padding-top: calc(230px + 5vw);
     }
 }
 
@@ -15,12 +15,8 @@
 
 .articles {
     width: 100%;
-    position: relative;
+    // position: relative;
 }
-
-// .wrapper.articles {
-//     position: relative;
-// }
 
 .skills,
 .gear {
@@ -32,6 +28,10 @@
         }
     .textContainer {
         width: 40%;
+    }
+    img {
+        position: relative;
+        top: -35px;
     }
 }
 
@@ -46,8 +46,6 @@
         padding-left: 80px;
     }
     img {
-        position: relative;
-        top: -35px;
         left: -40px;
     }
 }
@@ -63,21 +61,18 @@
         text-align: right;
     }
     img {
-        position: relative;
-        top: -35px;
         right: -40px;
     }
-}
-
-.articles .fullBleedContainer {
-    height: 500px;
-    bottom: -450px;
 }
 
 // Home Page "links" section styling
 
 .links {
-    width: 100%;
+    position: relative;
+    .fullBleedContainer {
+        height: 50vh;
+        top: -30px;
+    }
 }
 
 .wrapper.links {
@@ -85,27 +80,36 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    padding: 30px 10px 100px 130px;
+    padding: 100px 0 100px 130px;
+
 }
 
 .linkItems {
-    width: calc(50% - 30px);
-    margin-right: 30px;
+    width: calc(50% - 60px);
+    margin: 0 60px 60px 0;
+    a {
+        display: flex;
+        transform: translateX(-50px);
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+        }   
+    }
+    p {
+        margin: 10px 0;
+    }
 }
 
-
-.links i {
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $seaGreen;
-    background-position: center;
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    text-align: center;
-    padding-top: 8px;
     font-size: 1.5rem;
-    position: relative;
-    top: 42px;
-    left: -64px;
+    transform: translateX(-20px);
 }
 
 .mapBackgroundImg {
@@ -117,13 +121,9 @@
 
 // Home Page profile section styling
 
-h2 {
-    font-size: 2.1rem;
-}
-
 .wrapper.profile {
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 130px 80px 60px 120px;
     .imgContainer {
         background-color: $canary;
@@ -144,20 +144,28 @@ h2 {
 .gallery {
     ul {
         display: flex;
-        // flex-wrap: wrap;
         justify-content: center;
     }
     li {
         width: calc((100% / 3) - (70px / 3));
-        // min-width: 300px;
     }
     li:nth-child(2) {
         margin: 0 35px;
     }
+    .imgContainer {
+        transition: 0.5s;
+            &:hover {
+                transform: scale(1.6);
+                z-index: 10;
+                img {
+                    border-radius: 10%;
+                }
+            }
+    }
 }
 
 .gallery.wrapper {
-    padding: 100px 80px 100px 80px;
+    padding: 100px 80px;
 }
 
 // Blog Page general layout styling
@@ -181,13 +189,13 @@ h2 {
         order: 1;
     }
     aside {
-        // position: sticky;
-        // top: 0;
+        position: sticky;
+        top: 0;
         width: 31%;
-        margin: 0 60px;
+        margin: 350px 60px 0 60px;
         height: 100%;
         background-color: $white;
-        transform: translateY(350px);
+        // transform: translateY(350px);
         .imgContainer {
             position: relative;
             left: -60px;
@@ -254,7 +262,7 @@ span {
 
 .contactPage.wrapper {
     display: flex;
-    padding: 0 110px 100px 80px;
+    padding: 0 110px 150px 80px;
 }
 
 .contactPage {
@@ -280,19 +288,21 @@ span {
         height: 100%;
         margin-right: 30px;
         // background-color: $ice;
-        transform: translateY(300px);
+        transform: translateY(350px);
     }
     .contactEmail {
+        font-size: 1.3rem;
         text-transform: uppercase;
         font-family: $headingFont;
-        margin: 18px 0;
+        margin: 25px 0;
     }
     address {
         font-style: normal;
     }
     .socialMedia {
+        font-size: 1.3rem;
         display: flex;
-        width: 37%;
+        width: 46%;
         justify-content: space-between;
     }
     .fullBleedContainer {
