@@ -145,6 +145,8 @@
     }
     li {
         width: calc((100% / 3) - (70px / 3));
+        // position: relative;
+        // width: 100%;
     }
     li:nth-child(2) {
         margin: 0 35px;
@@ -152,10 +154,10 @@
     .imgContainer {
         transition: 0.5s;
             &:hover {
-                transform: scale(1.6);
-                z-index: 10;
+                transform: scale(1.2);
                 img {
                     border-radius: 10%;
+                    box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.5);
                 }
             }
     }
