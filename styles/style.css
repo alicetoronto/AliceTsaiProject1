@@ -239,12 +239,6 @@ html {
   font-size: 125%;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   color: #2C2C2C;
@@ -257,10 +251,12 @@ h3 {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  letter-spacing: 1px;
 }
 
 h1 {
   font-size: 4rem;
+  letter-spacing: normal;
 }
 
 h2 {
@@ -274,6 +270,12 @@ h3 {
 p {
   text-align: left;
   line-height: 32px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -293,23 +295,9 @@ a:focus {
   outline: dotted 2px #4CEEA7;
 }
 
-.skip-link {
-  position: absolute;
-  left: -1000px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.skip-link:focus {
-  left: 0;
-  -webkit-transform: none;
-          transform: none;
-}
-
-.slideOutIcon {
-  display: none;
-}
-
 nav {
+  line-height: 29px;
+  letter-spacing: 1px;
   margin-top: 15px;
 }
 nav ul {
@@ -336,17 +324,78 @@ nav ul li:last-child {
   margin-left: 30px;
 }
 
+.wrapper {
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.skip-link:focus {
+  left: 0;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.slideOutIcon {
+  display: none;
+}
+
+.homeHeader,
+.blogHeader .wrapper,
+.contactHeader .wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.homeHeader,
+.blogBackground,
+.contactBackground {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blogBackground,
+.contactBackground {
+  width: 100%;
+  background-position: 50% 20px;
+  position: absolute;
+  height: 60vh;
+  z-index: -10;
+  top: 0;
+}
+
+.blogHeader h1,
+.contactHeader h1 {
+  text-align: center;
+  margin-top: 175px;
+  line-height: 92px;
+}
+
 button,
 .buttonLinks {
   font-family: "Playfair Display", serif;
   font-size: 1rem;
+  line-height: 32px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   background-color: #4CEEA7;
   color: #2C2C2C;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
-  padding: 10px 15px;
+  padding: 5px 15px 8px 15px;
 }
 button:hover, button:focus,
 .buttonLinks:hover,
@@ -361,12 +410,6 @@ button {
 button:hover, button:focus {
   cursor: pointer;
   outline: dotted 2px #4CEEA7;
-}
-
-.wrapper {
-  max-width: 1300px;
-  width: 90%;
-  margin: 0 auto;
 }
 
 img {
@@ -445,19 +488,8 @@ textarea {
 
 .homeHeader {
   background-image: url(../captured-final-assets/header-image.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
   height: 65vh;
   max-height: 755px;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 .homeHeader li:first-child {
   border-bottom: 3px #4CEEA7 solid;
@@ -496,32 +528,9 @@ textarea {
 .blogHeader li:nth-child(3) {
   border-bottom: 3px #4CEEA7 solid;
 }
-.blogHeader h1 {
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 175px;
-}
-.blogHeader .wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
 
 .blogBackground {
   background-image: url(../captured-final-assets/blog-header.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 20px;
-  position: absolute;
-  z-index: -10;
-  top: 0;
-  height: 60vh;
-  width: 100%;
 }
 
 .contactHeader {
@@ -530,23 +539,9 @@ textarea {
 .contactHeader li:nth-child(4) {
   border-bottom: 3px #4CEEA7 solid;
 }
-.contactHeader h1 {
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 175px;
-}
 
 .contactBackground {
   background-image: url(../captured-final-assets/contact-header.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 20px;
-  position: absolute;
-  z-index: -10;
-  top: 0;
-  height: 60vh;
-  width: 90%;
-  max-width: 1300px;
 }
 
 .about {
@@ -883,6 +878,7 @@ span {
 }
 .contactPage .contactEmail {
   font-size: 1.3rem;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
   margin: 25px 0;
@@ -1059,6 +1055,7 @@ footer p {
     background-position: 12% 45%;
   }
   .homeHeader h1 {
+    font-size: calc(0.8rem + 8vw);
     margin-right: 0;
     padding-left: 50px;
     padding-right: 2vw;
@@ -1188,12 +1185,12 @@ footer p {
     left: 0px;
     width: 90%;
   }
+  .wrapper.blogPage aside p,
+.wrapper.blogPage aside a {
+    font-size: 0.9rem;
+  }
   .wrapper.blogPage h3 {
     font-size: 1.2rem;
-  }
-  .wrapper.blogPage p,
-.wrapper.blogPage a {
-    font-size: 0.9rem;
   }
 }
 @media (max-width: 1020px) {
@@ -1221,6 +1218,14 @@ footer p {
   }
 }
 @media (max-width: 775px) {
+  .blogHeader {
+    height: 86vw;
+  }
+
+  .blogBackground {
+    height: 90vw;
+  }
+
   label.seeMore {
     display: none;
   }
@@ -1266,6 +1271,8 @@ footer p {
     max-width: 500px;
     margin: 50px 20px;
     position: static;
+    -webkit-box-shadow: 10px 10px #FDFA69;
+            box-shadow: 10px 10px #FDFA69;
   }
   .wrapper.blogPage aside .textContainer {
     max-width: 500px;
@@ -1274,23 +1281,24 @@ footer p {
   .mainImg img {
     -webkit-transform: none;
             transform: none;
-    border-left: 10px solid #FDFA69;
-    border-bottom: 10px solid #FDFA69;
+    -webkit-box-shadow: -10px 10px #FDFA69;
+            box-shadow: -10px 10px #FDFA69;
   }
 
   .blogPost .textContainer {
     padding: 20px 10px 10px 10px;
   }
 
-  .blogPage input,
-.blogPage textarea {
+  input,
+textarea {
     padding: 8px 10px;
   }
-  .blogPage input {
+
+  input {
     width: 100%;
     border: 3px solid #4CEEA7;
   }
-  .blogPage input:first-of-type {
+  input:first-of-type {
     margin-right: 0;
     margin-bottom: 20px;
   }
@@ -1308,5 +1316,74 @@ footer p {
   }
   .comments .textContainer {
     padding-left: 15px;
+  }
+}
+@media (max-width: 1155px) {
+  .contactPage.wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 80px;
+  }
+
+  .contactPage main {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 100%;
+  }
+  .contactPage aside {
+    width: 100%;
+    margin: 80px 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .contactPage .socialMedia {
+    width: 25%;
+  }
+}
+@media (max-width: 775px) {
+  .contactPage.wrapper {
+    padding: 0;
+    width: 95%;
+  }
+
+  .contactHeader {
+    height: 83vw;
+  }
+
+  .contactBackground {
+    background-position: 32% 20px;
+    height: 90vw;
+  }
+
+  .contactPage h1 {
+    width: 60%;
+    margin: 30vw auto 0 auto;
+  }
+  .contactPage form {
+    padding: 30px 10px;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-box-shadow: -10px 10px #FDFA69;
+            box-shadow: -10px 10px #FDFA69;
+  }
+  .contactPage aside {
+    margin: 50px 0;
+    text-align: center;
+  }
+  .contactPage .socialMedia {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contactPage .socialMedia a {
+    margin: 0 15px;
+  }
+  .contactPage .fullBleedContainer {
+    height: calc(100% - 52vh);
+    top: 52vh;
   }
 }

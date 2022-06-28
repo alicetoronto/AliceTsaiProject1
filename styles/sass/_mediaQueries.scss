@@ -1,14 +1,15 @@
-// Home page 1390px - laptop screen
+//Home page media queries
 //#region
+// Home page 1390px - laptop screen
 @media (max-width: 1390px) {
     .wrapper {
         width: 100%;
     }
     nav {
-            ul {
-                margin-right: 40px;
-            }
+        ul {
+            margin-right: 40px;
         }
+    }
     .homeHeader {
         height: 60vh;
         h1 {
@@ -131,6 +132,7 @@
     height: 30vh;
     background-position: 12% 45%;
         h1 {
+            font-size: calc(0.8rem + 8vw);
             margin-right: 0;
             padding-left: 50px;
             padding-right: 2vw;
@@ -246,6 +248,8 @@
 
 //#endregion
 
+//Blog page media queries
+//#region
 // Blog page 1190px
 @media (max-width: 1190px) {
     .wrapper.blogPage {
@@ -256,16 +260,17 @@
                 left: 0px;
                 width: 90%;
             }
+            p,
+            a {
+                font-size: 0.9rem;
+            }
         }
         h3 {
             font-size: 1.2rem;
         }
-        p,
-        a {
-            font-size: 0.9rem;
-        }
     }
 }
+// end of Blog page 1190px
 
 // Blog page 1020px
 @media (max-width: 1020px) {
@@ -291,8 +296,16 @@
         }
     }
 }
+// end of Blog page 1020px
 
+// Blog page 775px
 @media (max-width: 775px) {
+    .blogHeader {
+        height: 86vw;
+    }
+    .blogBackground {
+        height: 90vw;
+    }
     label.seeMore {
         display: none;
     }
@@ -320,7 +333,7 @@
                 max-width: 500px;
                 margin: 50px 20px;
                 position: static;
-                // align-self: center;
+                box-shadow: 10px 10px $canary;
             }
             .textContainer {
                 max-width: 500px;
@@ -330,52 +343,109 @@
     .mainImg {
         img {
             transform: none;
-            border-left: 10px solid $canary;
-            border-bottom: 10px solid $canary;
+            box-shadow: -10px 10px $canary;
         }
     }
     .blogPost .textContainer {
         padding: 20px 10px 10px 10px;
     }
-    .blogPage {
-        input,
-        textarea {
-            padding: 8px 10px;
+    input,
+    textarea {
+        padding: 8px 10px;
+    }
+    input {
+        width: 100%;
+        border: 3px solid $seaGreen;
+        &:first-of-type {
+            margin-right: 0;
+            margin-bottom: 20px;
         }
-        input {
+    }
+    .comments {
+        margin: 30px 0;
+        padding: 10px;
+        article {
+            padding: 35px 0;
+        }
+
+        .imgContainer {
+            width: 10%;
+            min-width: 50px;
+        }
+
+        .textContainer {
+            padding-left: 15px;
+        }
+    }
+}
+// end of Blog page 775px
+
+//#endregion
+
+// Contact page media queries
+//#region
+// Contact page 1155px
+@media (max-width: 1155px) {
+    .contactPage.wrapper {
+        flex-direction: column;
+        padding: 0 80px;
+    }
+    .contactPage {
+        main {
+            order: 0;
             width: 100%;
-            border: 3px solid $seaGreen;
-            &:first-of-type {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-
+        }
+        aside {
+            width: 100%;
+            margin: 80px 0;
+            transform: none;
+        }
+        .socialMedia {
+            width: 25%;
         }
     }
-.comments {
-    margin: 30px 0;
-    padding: 10px;
-    article {
-        padding: 35px 0;
-    }
-
-    .imgContainer {
-        width: 10%;
-        min-width: 50px;
-    }
-
-    .textContainer {
-        // width: 90%;
-        padding-left: 15px;
-    }
-
-    // p {
-    //     margin: 0;
-    // }
-
-    // p:first-child {
-    //     margin-bottom: 8px;
-    // }
 }
-// space between comments and profile size
+// end of Contact page 1155px
+
+// Contact page 775px
+@media (max-width: 775px) {
+    .contactPage.wrapper {
+        padding: 0;
+        width: 95%;
+    }
+    .contactHeader {
+        height: 83vw;
+    }
+    .contactBackground {
+        background-position: 32% 20px;
+        height: 90vw;
+    }
+    .contactPage {
+        h1 {
+            width: 60%;
+            margin: 30vw auto 0 auto;
+        }
+        form {
+            padding: 30px 10px;
+            transform: none;
+            box-shadow: -10px 10px $canary;
+        }
+        aside {
+            margin: 50px 0;
+            text-align: center;
+        }
+        .socialMedia {
+            width: 100%;
+            justify-content: center;
+            a {
+                margin: 0 15px;
+            }
+        }
+        .fullBleedContainer {
+            height: calc(100% - 52vh);
+            top: 52vh;
+        }
+    }
 }
+// end of Contact page 775px
+//#endregion

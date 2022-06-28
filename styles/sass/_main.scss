@@ -280,9 +280,9 @@ span {
     position: relative;
     // main section styling
     main {
-            width: 70%;
-            order: 1;
-            background-color: $canary;
+        width: 70%;
+        order: 1;
+        background-color: $canary;
     }
     form {
         background-color: $white;
@@ -298,11 +298,11 @@ span {
         width: 30%;
         height: 100%;
         margin-right: 30px;
-        // background-color: $ice;
         transform: translateY(350px);
     }
     .contactEmail {
         font-size: 1.3rem;
+        letter-spacing: 1.1px;
         text-transform: uppercase;
         font-family: $headingFont;
         margin: 25px 0;
