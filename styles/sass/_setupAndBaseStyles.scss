@@ -32,7 +32,12 @@ h3 {
     margin: 0;
     padding: 0;
 }
-
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 2.1rem;
+}
 h3 {
     font-size: 1.6rem;
 }
@@ -57,6 +62,21 @@ a {
     &:focus {
         outline: dotted 2px $seaGreen;
     }
+}
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    &:focus {
+        left: 0;
+        transform: none;
+    }
+}
+
+.slideOutIcon {
+    display: none;
 }
 
 nav {

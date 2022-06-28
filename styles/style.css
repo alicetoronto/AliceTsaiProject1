@@ -259,6 +259,14 @@ h3 {
   padding: 0;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.1rem;
+}
+
 h3 {
   font-size: 1.6rem;
 }
@@ -283,6 +291,22 @@ a:hover, a:focus {
 }
 a:focus {
   outline: dotted 2px #4CEEA7;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.skip-link:focus {
+  left: 0;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.slideOutIcon {
+  display: none;
 }
 
 nav {
@@ -435,17 +459,6 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.homeHeader .skip-link {
-  position: absolute;
-  left: -1000px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.homeHeader .skip-link:focus {
-  left: 0;
-  -webkit-transform: none;
-          transform: none;
-}
 .homeHeader li:first-child {
   border-bottom: 3px #4CEEA7 solid;
 }
@@ -477,10 +490,6 @@ textarea {
   right: 0;
 }
 
-.slideOutIcon {
-  display: none;
-}
-
 .blogHeader {
   height: 365px;
 }
@@ -488,10 +497,19 @@ textarea {
   border-bottom: 3px #4CEEA7 solid;
 }
 .blogHeader h1 {
-  font-size: 4rem;
   text-align: center;
   margin: 0 auto;
   margin-top: 175px;
+}
+.blogHeader .wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .blogBackground {
@@ -503,8 +521,7 @@ textarea {
   z-index: -10;
   top: 0;
   height: 60vh;
-  width: 90%;
-  max-width: 1300px;
+  width: 100%;
 }
 
 .contactHeader {
@@ -514,7 +531,6 @@ textarea {
   border-bottom: 3px #4CEEA7 solid;
 }
 .contactHeader h1 {
-  font-size: 4rem;
   text-align: center;
   margin: 0 auto;
   margin-top: 175px;
@@ -531,10 +547,6 @@ textarea {
   height: 60vh;
   width: 90%;
   max-width: 1300px;
-}
-
-h2 {
-  font-size: 2.1rem;
 }
 
 .about {
@@ -754,7 +766,7 @@ h2 {
   top: 0;
   width: 31%;
   margin: 350px 60px 0 60px;
-  height: 100%;
+  height: 60%;
   background-color: #FAFAFA;
 }
 .wrapper.blogPage aside .imgContainer {
@@ -774,6 +786,21 @@ h2 {
   color: #4CEEA7;
   line-height: 1.6rem;
   list-style: inside;
+}
+
+.seeMore {
+  display: none;
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  left: -40px;
+  top: 248px;
+  background-color: #4CEEA7;
+  border-radius: 5%;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
 }
 
 span {
@@ -1002,6 +1029,10 @@ footer p {
     font-size: 120%;
   }
 
+  h1 {
+    font-size: calc(0.8rem + 8vw);
+  }
+
   h2 {
     font-size: 1.5rem;
   }
@@ -1010,28 +1041,29 @@ footer p {
     font-size: 1.3rem;
   }
 
-  .homeHeader {
-    height: 30vh;
-    background-position: 12% 45%;
-  }
-  .homeHeader h1 {
-    font-size: calc(0.8rem + 8vw);
-    margin-right: 0;
-    padding-left: 50px;
-    padding-right: 2vw;
-    border-bottom: solid 8px #FDFA69;
-    bottom: 0px;
-  }
-  .homeHeader nav {
+  nav {
     display: none;
   }
-  .homeHeader .slideOutIcon {
+
+  .slideOutIcon {
     display: block;
     -ms-flex-item-align: end;
         align-self: flex-end;
     margin: 2vw 2vw 0 0;
     font-size: calc(1.5rem + 1vw);
     text-shadow: #4CEEA7 2px -1px;
+  }
+
+  .homeHeader {
+    height: 30vh;
+    background-position: 12% 45%;
+  }
+  .homeHeader h1 {
+    margin-right: 0;
+    padding-left: 50px;
+    padding-right: 2vw;
+    border-bottom: solid 8px #FDFA69;
+    bottom: 0px;
   }
 
   .about {
@@ -1162,5 +1194,119 @@ footer p {
   .wrapper.blogPage p,
 .wrapper.blogPage a {
     font-size: 0.9rem;
+  }
+}
+@media (max-width: 1020px) {
+  label.seeMore {
+    display: inline-block;
+  }
+
+  .wrapper.blogPage main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .wrapper.blogPage aside {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    left: -50%;
+    z-index: 10;
+    -webkit-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+  }
+  .wrapper.blogPage input:checked + aside {
+    left: 0;
+    -webkit-box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.2);
+  }
+}
+@media (max-width: 775px) {
+  label.seeMore {
+    display: none;
+  }
+
+  .wrapper.blogPage {
+    margin-bottom: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper.blogPage main {
+    width: 95%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .wrapper.blogPage aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: none;
+    transition: none;
+    position: static;
+    height: auto;
+    width: 100%;
+    margin: 50px 0 0 0;
+  }
+  .wrapper.blogPage aside h3 {
+    text-align: center;
+  }
+  .wrapper.blogPage aside .imgContainer {
+    max-width: 500px;
+    margin: 50px 20px;
+    position: static;
+  }
+  .wrapper.blogPage aside .textContainer {
+    max-width: 500px;
+  }
+
+  .mainImg img {
+    -webkit-transform: none;
+            transform: none;
+    border-left: 10px solid #FDFA69;
+    border-bottom: 10px solid #FDFA69;
+  }
+
+  .blogPost .textContainer {
+    padding: 20px 10px 10px 10px;
+  }
+
+  .blogPage input,
+.blogPage textarea {
+    padding: 8px 10px;
+  }
+  .blogPage input {
+    width: 100%;
+    border: 3px solid #4CEEA7;
+  }
+  .blogPage input:first-of-type {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .comments {
+    margin: 30px 0;
+    padding: 10px;
+  }
+  .comments article {
+    padding: 35px 0;
+  }
+  .comments .imgContainer {
+    width: 10%;
+    min-width: 50px;
+  }
+  .comments .textContainer {
+    padding-left: 15px;
   }
 }

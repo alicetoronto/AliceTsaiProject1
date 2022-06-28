@@ -14,6 +14,7 @@
 <body class="blogPage">
     <header class="blogHeader">
         <div class="wrapper">
+            <a href="#mainContent" class="skip-link">Skip to main content</a>
             <nav>
                 <ul>
                     <li><a href="./index.html">Home</a></li>
@@ -22,19 +23,21 @@
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="slideOutIcon">
+                <label for="slideOut"></label>
+                <i class="fa-solid fa-ellipsis-vertical" aria-hidden=“true”></i>
+            </div>
             <h1>Blog</h1>
+            <div class="blogBackground">
+                <!-- container for background img -->
+            </div>
         </div> <!-- end of wrapper -->
     </header>
-    <div class="wrapper">
-        <div class="blogBackground">
-            <!-- container for background img -->
-        </div>
-    </div>
     <div class="fullBleedContainer">
         <!-- full bleed in $ice -->
     </div>
     <div class="wrapper blogPage">
-        <main>
+        <main id="mainContent">
             <section class="blogPost">
                 <div class="imgContainer mainImg">
                     <img src="./captured-final-assets/blog-post-image.jpg" alt="A woman sitting in a field of dandelions at sunset looking into the distance through her camera">
@@ -80,6 +83,8 @@
                 <button>Post Comment</button>
             </form>
         </main>
+        <label for="seeMore" class="seeMore">See More</label>
+        <input type="checkbox" id="seeMore" class="seeMore">
         <aside>
             <div class="imgContainer">
                 <img src="./captured-final-assets/side-blog-image.jpg" alt="Hand throwing a camera lens into the air against a scenic background of a lake and hills/mountains and blue sky with some white clouds">
