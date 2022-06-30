@@ -1,10 +1,14 @@
 // Home header
 .homeHeader {
     background-image: url(../captured-final-assets/header-image.jpg);
-    height: 65vh;
-    max-height: 755px;
-    li:first-child {
+    // height: 65vh;
+    // max-height: 755px;
+    height: 600px;
+    .mainNav li:first-child {
         border-bottom: 3px $seaGreen solid;
+    }
+    .slideOutList li:first-child {
+        border-bottom: 3px $white solid;
     }
     h1 {
         font-size: calc(6rem + 1vw);
@@ -42,19 +46,18 @@
 .animatedH1 {
     animation-name: animatedH1;
     animation-delay: 0.3s;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-iteration-count: 1;
-    animation-timing-function: linear;
+    // animation-timing-function: linear;
 }
 
 @keyframes animatedH1 {
     50% {
     box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.9);
     background-color: rgba(255, 255, 255, 0.9);
+    // color: $white;
     }
 }
-
-
 
 .boxImage {
     background-image: url(../captured-final-assets/header-box-image.jpg);
@@ -77,8 +80,11 @@
 // Blog header
 .blogHeader {
     height: 365px;
-    li:nth-child(3) {
+    .mainNav li:nth-child(3) {
     border-bottom: 3px $seaGreen solid;
+    }
+    .slideOutList li:nth-child(3) {
+        border-bottom: 3px $white solid;
     }
 }
 .blogBackground {
@@ -89,8 +95,11 @@
 // Contact header
 .contactHeader {
     height: 365px;
-    li:nth-child(4) {
+    .mainNav li:nth-child(4) {
         border-bottom: 3px $seaGreen solid;
+    }
+    .slideOutList li:nth-child(4) {
+        border-bottom: 3px $white solid;
     }
 }
 .contactBackground {

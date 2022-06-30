@@ -5,13 +5,14 @@
     .wrapper {
         width: 100%;
     }
-    nav {
+    .mainNav {
         ul {
             margin-right: 40px;
         }
     }
     .homeHeader {
-        height: 60vh;
+        // height: 60vh;
+        height: 600px;
         h1 {
             font-size: calc(5.3rem + 1vw);
             bottom: 10px;
@@ -79,7 +80,7 @@
             padding: 0 40px;
         }
     }
-    nav {
+    .mainNav {
         font-size: 0.9rem;
     }
     .skills,
@@ -100,6 +101,12 @@
     .gear {
         margin-bottom: 100px;
     }
+
+    .gallery {
+        li:nth-child(2) {
+            margin: 0 25px;
+        }
+    }
 }
 // end of Home page 1080px;
 
@@ -118,15 +125,12 @@
     h3{
         font-size: 1.3rem;
     }
-    nav {
+    .mainNav {
         display: none;
     }
     .slideOutIcon {
         display: block;
-        align-self: flex-end;
-        margin: 2vw 2vw 0 0;
-        font-size: calc(1.5rem + 1vw);
-        text-shadow: $seaGreen 2px -1px;
+        position: fixed;
     }
     .homeHeader {
     height: 30vh;
@@ -274,6 +278,9 @@
 
 // Blog page 1020px
 @media (max-width: 1020px) {
+    .mainNav ul {
+        margin-right: calc(10% - 30px);
+    }
     label.seeMore {
         display: inline-block;
     }

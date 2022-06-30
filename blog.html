@@ -15,7 +15,7 @@
     <header class="blogHeader">
         <div class="wrapper">
             <a href="#mainContent" class="skip-link">Skip to main content</a>
-            <nav>
+            <nav class="mainNav">
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./index.html#about">About</a></li>
@@ -23,10 +23,44 @@
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="slideOutIcon">
-                <label for="slideOut"></label>
+            <label for="slideOut" class="slideOutIcon">
                 <i class="fa-solid fa-ellipsis-vertical" aria-hidden=“true”></i>
-            </div>
+            </label>
+            <input type="checkbox" id="slideOut" class="slideOut">
+            <nav class="slideOutNav">
+                <ul class="slideOutList">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <ul class="slideOutSocial">
+                    <li>
+                        <a href="https://www.facebook.com/">
+                            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                            <span class="sr-only">Connect with us on Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Connect with us on Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/?lang=en">
+                            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                            <span class="sr-only">Connect with us on Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.whatsapp.com/">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                            <span class="sr-only">Connect with us on Whatsapp</span>
+                        </a>
+                    </li>
+                </ul> <!-- end of slideOutSocial -->
+            </nav> <!-- end of slideOutNav-->
             <h1>Blog</h1>
             <div class="blogBackground">
                 <!-- container for background img -->

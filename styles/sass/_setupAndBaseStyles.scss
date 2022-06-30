@@ -65,7 +65,27 @@ a {
     }
 }
 
-nav {
+.wrapper {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.skip-link {
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    &:focus {
+        left: 0;
+        top: 0;
+        transform: none;
+    }
+}
+
+.mainNav {
     line-height: 29px;
     letter-spacing: 1px;
     margin-top: 15px;
@@ -75,17 +95,14 @@ nav {
         margin-right: 80px;
         font-family: $headingFont;
         text-transform: uppercase;
-
         li {
             padding: 5px;
             margin: 0 15px;
             margin-bottom: 0;
         }
-
         li:nth-child(3) {
             margin-right: 0;
         }
-
         li:last-child {
             margin-right: 0;
             margin-left: 30px;
@@ -93,26 +110,63 @@ nav {
     }
 }
 
-.wrapper {
-    max-width: 1300px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.skip-link {
-    position: absolute;
-    left: -1000px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-
-    &:focus {
-        left: 0;
-        transform: none;
+.slideOutIcon {
+    display: none;
+    z-index: 30;
+    align-self: flex-end;
+    margin: 2vw 2vw 0 0;
+    padding: 5px 5px 0 0;
+    font-size: calc(1.5rem + 1vw);
+    text-shadow: $seaGreen 2px -1px;
+    &:hover {
+        cursor: pointer;
     }
 }
 
-.slideOutIcon {
+input[type=checkbox].slideOut {
     display: none;
+    &:checked + .slideOutNav {
+        left: 0;
+    }
+}
+
+.slideOutNav {
+    background-color: rgba(76, 238, 167, 0.9);
+    height: 100vh;
+    width: 175px;
+    z-index: 30;
+    padding: 50px 0 0 25px;
+    position: fixed;
+    left: -175px;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; // credit to https: //getcssscan.com/css-box-shadow-examples
+    font-size: 1rem;
+}
+
+.slideOutList,
+.slideOutSocial {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.slideOutList {
+    padding-left: 35px;
+    li {
+        margin: 20px 0;
+    }
+    i {
+        position: absolute;
+        left: 25px;
+        transform: translateY(2px);
+    }
+}
+        
+.slideOutSocial {
+    margin-top: 150px;
+    li {
+        margin: 10px 0;
+    }
 }
 
 .homeHeader,
@@ -135,7 +189,8 @@ nav {
     width: 100%;
     background-position: 50% 20px;
     position: absolute;
-    height: 60vh;
+    // height: 60vh;
+    height: 550px;
     z-index: -10;
     top: 0;
 }
