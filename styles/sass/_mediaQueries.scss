@@ -1,3 +1,31 @@
+// media queries common across all pages
+@media (max-width: 775px) {
+    html {
+        font-size: 120%;
+    }
+
+    h1 {
+        font-size: calc(0.8rem + 8vw);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .mainNav {
+        display: none;
+    }
+
+    .slideOutIcon {
+        display: block;
+        position: fixed;
+    }
+}
+
 //Home page media queries
 //#region
 // Home page 1390px - laptop screen
@@ -11,7 +39,6 @@
         }
     }
     .homeHeader {
-        // height: 60vh;
         height: 600px;
         h1 {
             font-size: calc(5.3rem + 1vw);
@@ -113,36 +140,20 @@
 
 // Home page 775px - tablet and mobile
 @media (max-width: 775px) {
-    html {
-        font-size: 120%;
-    }
-    h1 {
-        font-size: calc(0.8rem + 8vw);
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
-    h3{
-        font-size: 1.3rem;
-    }
-    .mainNav {
-        display: none;
-    }
-    .slideOutIcon {
-        display: block;
-        position: fixed;
-    }
     .homeHeader {
-    height: 30vh;
-    background-position: 12% 45%;
-        h1 {
-            font-size: calc(0.8rem + 8vw);
-            margin-right: 0;
-            padding-left: 50px;
-            padding-right: 2vw;
-            border-bottom: solid 8px $canary;
-            bottom: 0px;
-        }
+        height: 30vh;
+        background-position: 12% 45%;
+            h1 {
+                font-size: calc(0.8rem + 8vw);
+                margin-right: 0;
+                // padding-left: 50px;
+                padding-left: 10px;
+                padding-right: 2vw;
+                border-bottom: solid 8px $canary;
+                border-left: solid 8px $canary;
+                border-top: 8px solid transparent;
+                bottom: 0px;
+            }
     }
     .about {
         min-height: none;
@@ -158,8 +169,6 @@
             background-position: bottom right;
         }
         h2 {
-        border-left: solid 5px $canary;
-        border-bottom: solid 5px $canary;
         display: inline-block;
         }
     }
@@ -308,10 +317,17 @@
 // Blog page 775px
 @media (max-width: 775px) {
     .blogHeader {
-        height: 86vw;
+        height: 25vh;
+        h1 {
+            margin-top: 12vh;
+        }
     }
     .blogBackground {
-        height: 90vw;
+        height: 30vh;
+    }
+    .blogPage .fullBleedContainer {
+        height: calc(100% - 30vh);
+        top: 30vh;
     }
     label.seeMore {
         display: none;
@@ -406,9 +422,14 @@
             width: 100%;
             margin: 80px 0;
             transform: none;
+            text-align: center;
         }
         .socialMedia {
-            width: 25%;
+            width: 100%;
+            justify-content: center;
+            a {
+                margin: 0 15px;
+            }
         }
     }
 }
@@ -421,16 +442,20 @@
         width: 95%;
     }
     .contactHeader {
-        height: 83vw;
+        height: 30vh;
     }
     .contactBackground {
         background-position: 32% 20px;
-        height: 90vw;
+        height: 30vh;
     }
     .contactPage {
         h1 {
             width: 60%;
-            margin: 30vw auto 0 auto;
+            margin: 6vh auto 0 auto;
+            span {
+                display: block;
+                transform: translate(45px, -30px);
+            }
         }
         form {
             padding: 30px 10px;
@@ -439,18 +464,10 @@
         }
         aside {
             margin: 50px 0;
-            text-align: center;
-        }
-        .socialMedia {
-            width: 100%;
-            justify-content: center;
-            a {
-                margin: 0 15px;
-            }
         }
         .fullBleedContainer {
-            height: calc(100% - 52vh);
-            top: 52vh;
+            height: calc(100% - 30vh);
+            top: 30vh;
         }
     }
 }

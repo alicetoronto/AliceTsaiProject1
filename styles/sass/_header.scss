@@ -1,14 +1,48 @@
+.homeHeader,
+.blogHeader .wrapper,
+.contactHeader .wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeHeader,
+.blogBackground,
+.contactBackground,
+.boxImage {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blogBackground,
+.contactBackground {
+    width: 100%;
+    background-position: 50% 20px;
+    position: absolute;
+    height: 550px;
+    z-index: -10;
+    top: 0;
+}
+
+.blogHeader,
+.contactHeader {
+    height: 365px;
+    h1 {
+        text-align: center;
+        margin-top: 175px;
+        line-height: 92px;
+    }
+}
+
 // Home header
 .homeHeader {
     background-image: url(../captured-final-assets/header-image.jpg);
-    // height: 65vh;
-    // max-height: 755px;
     height: 600px;
     .mainNav li:first-child {
         border-bottom: 3px $seaGreen solid;
     }
     .slideOutList li:first-child {
-        border-bottom: 3px $white solid;
+        border-bottom: 2px $white solid;
     }
     h1 {
         font-size: calc(6rem + 1vw);
@@ -21,47 +55,30 @@
 }
 
 // credit to @alvarotrigo on Code Pen for the animation (https: //alvarotrigo.com/blog/css-text-animations/)
-// .animatedH1 {
-//     animation-name: h1Colour;
-//     animation-delay: 0.3s;
-//     animation-duration: 0.2s;
-//     animation-iteration-count: 1;
-//     animation-timing-function: linear;
-//     background-size: 200% auto;
-
-// }
-
-// @keyframes h1Colour {
-//     50% {
-//         background-position: 200% center;
-//         background-image: linear-gradient(-225deg,
-//             $white 30%
-//         );
-//         background-clip: text;
-//         -webkit-background-clip: text;
-//         -webkit-text-fill-color: transparent;
-//     }
-// }
-
 .animatedH1 {
-    animation-name: animatedH1;
+    animation-name: h1Colour;
     animation-delay: 0.3s;
     animation-duration: 0.2s;
     animation-iteration-count: 1;
-    // animation-timing-function: linear;
+    animation-timing-function: linear;
+    background-size: 200% auto;
+
 }
 
-@keyframes animatedH1 {
+@keyframes h1Colour {
     50% {
-    box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.9);
-    background-color: rgba(255, 255, 255, 0.9);
-    // color: $white;
+        background-position: 200% center;
+        background-image: linear-gradient(-225deg,
+            $white 30%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
 .boxImage {
     background-image: url(../captured-final-assets/header-box-image.jpg);
-    background-size: cover;
     background-position: center;
     height: 35vw;
     max-height: 485px;
@@ -79,12 +96,11 @@
 
 // Blog header
 .blogHeader {
-    height: 365px;
     .mainNav li:nth-child(3) {
     border-bottom: 3px $seaGreen solid;
     }
     .slideOutList li:nth-child(3) {
-        border-bottom: 3px $white solid;
+        border-bottom: 2px $white solid;
     }
 }
 .blogBackground {
@@ -94,12 +110,11 @@
 
 // Contact header
 .contactHeader {
-    height: 365px;
     .mainNav li:nth-child(4) {
         border-bottom: 3px $seaGreen solid;
     }
     .slideOutList li:nth-child(4) {
-        border-bottom: 3px $white solid;
+        border-bottom: 2px $white solid;
     }
 }
 .contactBackground {

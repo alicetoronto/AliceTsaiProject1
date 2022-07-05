@@ -130,78 +130,42 @@ input[type=checkbox].slideOut {
     }
 }
 
-.slideOutNav {
-    background-color: rgba(76, 238, 167, 0.9);
-    height: 100vh;
-    width: 175px;
-    z-index: 30;
-    padding: 50px 0 0 25px;
-    position: fixed;
-    left: -175px;
-    transition: 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; // credit to https: //getcssscan.com/css-box-shadow-examples
-    font-size: 1rem;
-}
-
+.slideOutNav,
 .slideOutList,
 .slideOutSocial {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+}
+
+.slideOutNav {
+    background-color: rgba(76, 238, 167, 0.95);
+    height: 100vh;
+    width: 70vw;
+    z-index: 30;
+    padding: 0 35px;
+    position: fixed;
+    left: -75vw;
+    transition: 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; // credit to https: //getcssscan.com/css-box-shadow-examples
+    font-size: 1rem;
+    text-transform: lowercase;
+    ul {
+        border-left: 2px solid $white;
+    }
+    li {
+        margin: 15px;
+    }
 }
 
 .slideOutList {
-    padding-left: 35px;
-    li {
-        margin: 20px 0;
-    }
-    i {
-        position: absolute;
-        left: 25px;
-        transform: translateY(2px);
-    }
+    align-items: center;
 }
-        
+
 .slideOutSocial {
-    margin-top: 150px;
-    li {
-        margin: 10px 0;
-    }
-}
-
-.homeHeader,
-.blogHeader .wrapper,
-.contactHeader .wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.homeHeader,
-.blogBackground,
-.contactBackground {
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.blogBackground,
-.contactBackground {
-    width: 100%;
-    background-position: 50% 20px;
-    position: absolute;
-    // height: 60vh;
-    height: 550px;
-    z-index: -10;
-    top: 0;
-}
-
-.blogHeader,
-.contactHeader {
-    h1 {
-        text-align: center;
-        margin-top: 175px;
-        line-height: 92px;
-    }
+    flex-direction: row;
+    transform: translateY(100px);
+    border-left: 2px solid $white;
 }
 
 button,
