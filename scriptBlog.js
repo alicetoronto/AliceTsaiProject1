@@ -40,19 +40,36 @@ console.log(mediaQ);
 console.log(outsideMediaQ);
 console.log(!outsideMediaQ.matches)
 
-if (mediaQ.matches && !outsideMediaQ.matches) {
-    window.addEventListener('scroll', function() {
-        if (footer.getBoundingClientRect().bottom <= 770) {
+// if (mediaQ.matches && !outsideMediaQ.matches) {
+//     window.addEventListener('scroll', function() {
+//         if (footer.getBoundingClientRect().bottom <= 770) {
+//         console.log("scroll")
+//         aside.style.opacity = '100%';
+//         aside.style.top = '61%';
+//         aside.style.boxShadow = '0 0 0 5000px rgba(0, 0, 0, 0.5)';
+//         } else {
+//             aside.style.top = '100vh';
+//             aside.style.opacity = '0%';
+//             aside.style.boxShadow = 'none';
+//         }
+//     });
+// }
+
+function applyJS() {
+    if (footer.getBoundingClientRect().bottom <= 770) {
         console.log("scroll")
         aside.style.opacity = '100%';
         aside.style.top = '61%';
         aside.style.boxShadow = '0 0 0 5000px rgba(0, 0, 0, 0.5)';
-        } else {
-            aside.style.top = '100vh';
-            aside.style.opacity = '0%';
-            aside.style.boxShadow = 'none';
-        }
-    });
+    } else {
+        aside.style.top = '100vh';
+        aside.style.opacity = '0%';
+        aside.style.boxShadow = 'none';
+    }
+};
+
+if (mediaQ.matches) {
+    window.addEventListener('scroll', applyJS())
 }
 
     // window.addEventListener('scroll', applyJS()); does not work
