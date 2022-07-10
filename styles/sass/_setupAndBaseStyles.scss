@@ -125,9 +125,6 @@ a {
 
 input[type=checkbox].slideOut {
     display: none;
-    &:checked + .slideOutNav {
-        left: 0;
-    }
 }
 
 .slideOutNav,
@@ -145,17 +142,30 @@ input[type=checkbox].slideOut {
     z-index: 30;
     padding: 0 35px;
     position: fixed;
-    left: -75vw;
+    right: -75vw;
     transition: 0.3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; // credit to https: //getcssscan.com/css-box-shadow-examples
     font-size: 1rem;
     text-transform: lowercase;
+    a:focus,
+    .closeSlideOut:focus {
+        outline: dotted 2px $white;
+    }
     ul {
         border-left: 2px solid $white;
     }
     li {
         margin: 15px;
     }
+}
+
+.closeSlideOut {
+    align-self: flex-end;
+    padding: 0;
+    transform: translate(10px, -295px);
+    width: auto;
+    line-height: 0;
+    font-size: 1.2rem;
 }
 
 .slideOutList {

@@ -30,3 +30,34 @@ form.addEventListener('submit', function (e) {
     document.querySelector('#email').value = '';
     document.querySelector('[name=comment]').value = '';
 });
+
+// Blog 'See More' modal
+const footer = document.querySelector('footer');
+const aside = document.querySelector('aside');
+const mediaQ = window.matchMedia('(max-width: 1020px)');
+const outsideMediaQ = window.matchMedia('(max-width: 775px)');
+console.log(mediaQ);
+console.log(outsideMediaQ);
+console.log(!outsideMediaQ.matches)
+
+if (mediaQ.matches && !outsideMediaQ.matches) {
+    window.addEventListener('scroll', function() {
+        if (footer.getBoundingClientRect().bottom <= 770) {
+        console.log("scroll")
+        aside.style.opacity = '100%';
+        aside.style.top = '61%';
+        aside.style.boxShadow = '0 0 0 5000px rgba(0, 0, 0, 0.5)';
+        } else {
+            aside.style.top = '100vh';
+            aside.style.opacity = '0%';
+            aside.style.boxShadow = 'none';
+        }
+    });
+}
+
+    // window.addEventListener('scroll', applyJS()); does not work
+// } else if (mediaQ.matches && outsideMediaQ.matches) {
+//     window.removeEventListener('scroll', applyJS())
+// };
+
+

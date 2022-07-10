@@ -153,7 +153,10 @@
         transition: transform 0.3s;
         &:hover {
             transform: scale(1.2);
+            z-index: 10;
         }
+        padding-top: 100%;
+        position: relative;
     }
     img {
         transition: box-shadow 0.3s;
@@ -161,6 +164,11 @@
             border-radius: 10%;
             box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.5);
         }
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
     }
 }
 
@@ -175,13 +183,9 @@
     position: absolute;
     top: 50%;
     width: auto;
-    // padding: 16px;
-    // margin-top: -22px;
-    // color: white;
     font-weight: bold;
     font-size: 2.5rem;
     transition: 0.6s ease;
-    // border-radius: 0 3px 3px 0;
     // user-select: none;
 }
 .prev {
@@ -190,7 +194,6 @@
 
 .next {
     right: 25px;
-    // border-radius: 3px 0 0 3px;
 }
 
 .slides {
@@ -242,20 +245,6 @@
             list-style: inside;
         }   
     }
-}
-
-.seeMore {
-    display: none;
-    position: absolute;
-    transform: rotate(90deg);
-    left: -40px;
-    top: 248px;
-    background-color: $seaGreen;
-    border-radius: 5%;
-    padding: 5px 10px;
-    text-transform: uppercase;
-    font-family: $headingFont;
-    font-size: 0.9rem;
 }
 
 .linkToAbout span {
